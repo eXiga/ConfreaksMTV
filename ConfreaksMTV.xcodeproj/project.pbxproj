@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69E9F89899023D38F5BE360B /* libPods-ConfreaksMTVTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2080276845C3AEE5C1870A13 /* libPods-ConfreaksMTVTests.a */; };
+		B01220371BB70F900018D566 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B01220361BB70F900018D566 /* main.m */; };
+		B012203A1BB70F900018D566 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B01220391BB70F900018D566 /* AppDelegate.m */; };
+		B012203D1BB70F900018D566 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B012203C1BB70F900018D566 /* ViewController.m */; };
+		B01220401BB70F900018D566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B012203E1BB70F900018D566 /* Main.storyboard */; };
+		B01220421BB70F900018D566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01220411BB70F900018D566 /* Assets.xcassets */; };
+		B01220451BB70F900018D566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01220431BB70F900018D566 /* LaunchScreen.storyboard */; };
+		B01220501BB70F900018D566 /* ConfreaksMTVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B012204F1BB70F900018D566 /* ConfreaksMTVTests.m */; };
+		B012205B1BB70F900018D566 /* ConfreaksMTVUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B012205A1BB70F900018D566 /* ConfreaksMTVUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B012204C1BB70F900018D566 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B012202A1BB70F900018D566 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B01220311BB70F900018D566;
+			remoteInfo = ConfreaksMTV;
+		};
+		B01220571BB70F900018D566 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B012202A1BB70F900018D566 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B01220311BB70F900018D566;
+			remoteInfo = ConfreaksMTV;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E32CF32E7F6394400320713 /* Pods-ConfreaksMTVTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTVTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests.release.xcconfig"; sourceTree = "<group>"; };
+		2080276845C3AEE5C1870A13 /* libPods-ConfreaksMTVTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConfreaksMTVTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B01220321BB70F900018D566 /* ConfreaksMTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConfreaksMTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B01220361BB70F900018D566 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B01220381BB70F900018D566 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B01220391BB70F900018D566 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B012203B1BB70F900018D566 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B012203C1BB70F900018D566 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B012203F1BB70F900018D566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B01220411BB70F900018D566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B01220441BB70F900018D566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B01220461BB70F900018D566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B012204B1BB70F900018D566 /* ConfreaksMTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConfreaksMTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B012204F1BB70F900018D566 /* ConfreaksMTVTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfreaksMTVTests.m; sourceTree = "<group>"; };
+		B01220511BB70F900018D566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B01220561BB70F900018D566 /* ConfreaksMTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConfreaksMTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B012205A1BB70F900018D566 /* ConfreaksMTVUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfreaksMTVUITests.m; sourceTree = "<group>"; };
+		B012205C1BB70F900018D566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA0416859718DF45CE4C38A8 /* Pods-ConfreaksMTVTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTVTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B012202F1BB70F900018D566 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B01220481BB70F900018D566 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69E9F89899023D38F5BE360B /* libPods-ConfreaksMTVTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B01220531BB70F900018D566 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		219FC876F654EEB330D2DC0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA0416859718DF45CE4C38A8 /* Pods-ConfreaksMTVTests.debug.xcconfig */,
+				1E32CF32E7F6394400320713 /* Pods-ConfreaksMTVTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		965DC2185F03CD808B0FD3A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2080276845C3AEE5C1870A13 /* libPods-ConfreaksMTVTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B01220291BB70F900018D566 = {
+			isa = PBXGroup;
+			children = (
+				B01220341BB70F900018D566 /* ConfreaksMTV */,
+				B012204E1BB70F900018D566 /* ConfreaksMTVTests */,
+				B01220591BB70F900018D566 /* ConfreaksMTVUITests */,
+				B01220331BB70F900018D566 /* Products */,
+				219FC876F654EEB330D2DC0E /* Pods */,
+				965DC2185F03CD808B0FD3A6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B01220331BB70F900018D566 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B01220321BB70F900018D566 /* ConfreaksMTV.app */,
+				B012204B1BB70F900018D566 /* ConfreaksMTVTests.xctest */,
+				B01220561BB70F900018D566 /* ConfreaksMTVUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B01220341BB70F900018D566 /* ConfreaksMTV */ = {
+			isa = PBXGroup;
+			children = (
+				B01220381BB70F900018D566 /* AppDelegate.h */,
+				B01220391BB70F900018D566 /* AppDelegate.m */,
+				B012203B1BB70F900018D566 /* ViewController.h */,
+				B012203C1BB70F900018D566 /* ViewController.m */,
+				B012203E1BB70F900018D566 /* Main.storyboard */,
+				B01220411BB70F900018D566 /* Assets.xcassets */,
+				B01220431BB70F900018D566 /* LaunchScreen.storyboard */,
+				B01220461BB70F900018D566 /* Info.plist */,
+				B01220351BB70F900018D566 /* Supporting Files */,
+			);
+			path = ConfreaksMTV;
+			sourceTree = "<group>";
+		};
+		B01220351BB70F900018D566 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B01220361BB70F900018D566 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B012204E1BB70F900018D566 /* ConfreaksMTVTests */ = {
+			isa = PBXGroup;
+			children = (
+				B012204F1BB70F900018D566 /* ConfreaksMTVTests.m */,
+				B01220511BB70F900018D566 /* Info.plist */,
+			);
+			path = ConfreaksMTVTests;
+			sourceTree = "<group>";
+		};
+		B01220591BB70F900018D566 /* ConfreaksMTVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B012205A1BB70F900018D566 /* ConfreaksMTVUITests.m */,
+				B012205C1BB70F900018D566 /* Info.plist */,
+			);
+			path = ConfreaksMTVUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B01220311BB70F900018D566 /* ConfreaksMTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B012205F1BB70F900018D566 /* Build configuration list for PBXNativeTarget "ConfreaksMTV" */;
+			buildPhases = (
+				B012202E1BB70F900018D566 /* Sources */,
+				B012202F1BB70F900018D566 /* Frameworks */,
+				B01220301BB70F900018D566 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConfreaksMTV;
+			productName = ConfreaksMTV;
+			productReference = B01220321BB70F900018D566 /* ConfreaksMTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B012204A1BB70F900018D566 /* ConfreaksMTVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B01220621BB70F900018D566 /* Build configuration list for PBXNativeTarget "ConfreaksMTVTests" */;
+			buildPhases = (
+				215A8D8F2DA937B19A6D0A27 /* Check Pods Manifest.lock */,
+				B01220471BB70F900018D566 /* Sources */,
+				B01220481BB70F900018D566 /* Frameworks */,
+				B01220491BB70F900018D566 /* Resources */,
+				79FCC678FD463A4B51231B16 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B012204D1BB70F900018D566 /* PBXTargetDependency */,
+			);
+			name = ConfreaksMTVTests;
+			productName = ConfreaksMTVTests;
+			productReference = B012204B1BB70F900018D566 /* ConfreaksMTVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B01220551BB70F900018D566 /* ConfreaksMTVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B01220651BB70F900018D566 /* Build configuration list for PBXNativeTarget "ConfreaksMTVUITests" */;
+			buildPhases = (
+				B01220521BB70F900018D566 /* Sources */,
+				B01220531BB70F900018D566 /* Frameworks */,
+				B01220541BB70F900018D566 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B01220581BB70F900018D566 /* PBXTargetDependency */,
+			);
+			name = ConfreaksMTVUITests;
+			productName = ConfreaksMTVUITests;
+			productReference = B01220561BB70F900018D566 /* ConfreaksMTVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B012202A1BB70F900018D566 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Anton Kostenich";
+				TargetAttributes = {
+					B01220311BB70F900018D566 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					B012204A1BB70F900018D566 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = B01220311BB70F900018D566;
+					};
+					B01220551BB70F900018D566 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = B01220311BB70F900018D566;
+					};
+				};
+			};
+			buildConfigurationList = B012202D1BB70F900018D566 /* Build configuration list for PBXProject "ConfreaksMTV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B01220291BB70F900018D566;
+			productRefGroup = B01220331BB70F900018D566 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B01220311BB70F900018D566 /* ConfreaksMTV */,
+				B012204A1BB70F900018D566 /* ConfreaksMTVTests */,
+				B01220551BB70F900018D566 /* ConfreaksMTVUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B01220301BB70F900018D566 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B01220451BB70F900018D566 /* LaunchScreen.storyboard in Resources */,
+				B01220421BB70F900018D566 /* Assets.xcassets in Resources */,
+				B01220401BB70F900018D566 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B01220491BB70F900018D566 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B01220541BB70F900018D566 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		215A8D8F2DA937B19A6D0A27 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		79FCC678FD463A4B51231B16 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B012202E1BB70F900018D566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B012203D1BB70F900018D566 /* ViewController.m in Sources */,
+				B012203A1BB70F900018D566 /* AppDelegate.m in Sources */,
+				B01220371BB70F900018D566 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B01220471BB70F900018D566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B01220501BB70F900018D566 /* ConfreaksMTVTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B01220521BB70F900018D566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B012205B1BB70F900018D566 /* ConfreaksMTVUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B012204D1BB70F900018D566 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B01220311BB70F900018D566 /* ConfreaksMTV */;
+			targetProxy = B012204C1BB70F900018D566 /* PBXContainerItemProxy */;
+		};
+		B01220581BB70F900018D566 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B01220311BB70F900018D566 /* ConfreaksMTV */;
+			targetProxy = B01220571BB70F900018D566 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B012203E1BB70F900018D566 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B012203F1BB70F900018D566 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B01220431BB70F900018D566 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B01220441BB70F900018D566 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B012205D1BB70F900018D566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B012205E1BB70F900018D566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B01220601BB70F900018D566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ConfreaksMTV/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = anton.kostenich.ConfreaksMTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B01220611BB70F900018D566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ConfreaksMTV/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = anton.kostenich.ConfreaksMTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B01220631BB70F900018D566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA0416859718DF45CE4C38A8 /* Pods-ConfreaksMTVTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ConfreaksMTVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = anton.kostenich.ConfreaksMTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConfreaksMTV.app/ConfreaksMTV";
+			};
+			name = Debug;
+		};
+		B01220641BB70F900018D566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E32CF32E7F6394400320713 /* Pods-ConfreaksMTVTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ConfreaksMTVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = anton.kostenich.ConfreaksMTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConfreaksMTV.app/ConfreaksMTV";
+			};
+			name = Release;
+		};
+		B01220661BB70F900018D566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ConfreaksMTVUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = anton.kostenich.ConfreaksMTVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ConfreaksMTV;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B01220671BB70F900018D566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ConfreaksMTVUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = anton.kostenich.ConfreaksMTVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ConfreaksMTV;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B012202D1BB70F900018D566 /* Build configuration list for PBXProject "ConfreaksMTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B012205D1BB70F900018D566 /* Debug */,
+				B012205E1BB70F900018D566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B012205F1BB70F900018D566 /* Build configuration list for PBXNativeTarget "ConfreaksMTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B01220601BB70F900018D566 /* Debug */,
+				B01220611BB70F900018D566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B01220621BB70F900018D566 /* Build configuration list for PBXNativeTarget "ConfreaksMTVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B01220631BB70F900018D566 /* Debug */,
+				B01220641BB70F900018D566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B01220651BB70F900018D566 /* Build configuration list for PBXNativeTarget "ConfreaksMTVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B01220661BB70F900018D566 /* Debug */,
+				B01220671BB70F900018D566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B012202A1BB70F900018D566 /* Project object */;
+}
