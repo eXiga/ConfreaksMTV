@@ -10,12 +10,22 @@
 		69E9F89899023D38F5BE360B /* libPods-ConfreaksMTVTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2080276845C3AEE5C1870A13 /* libPods-ConfreaksMTVTests.a */; };
 		B01220371BB70F900018D566 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B01220361BB70F900018D566 /* main.m */; };
 		B012203A1BB70F900018D566 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B01220391BB70F900018D566 /* AppDelegate.m */; };
-		B012203D1BB70F900018D566 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B012203C1BB70F900018D566 /* ViewController.m */; };
 		B01220401BB70F900018D566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B012203E1BB70F900018D566 /* Main.storyboard */; };
 		B01220421BB70F900018D566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01220411BB70F900018D566 /* Assets.xcassets */; };
 		B01220451BB70F900018D566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01220431BB70F900018D566 /* LaunchScreen.storyboard */; };
-		B01220501BB70F900018D566 /* ConfreaksMTVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B012204F1BB70F900018D566 /* ConfreaksMTVTests.m */; };
 		B012205B1BB70F900018D566 /* ConfreaksMTVUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B012205A1BB70F900018D566 /* ConfreaksMTVUITests.m */; };
+		B0C3B4421BB9E9400077D43C /* FTServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B4411BB9E9400077D43C /* FTServiceSpec.m */; settings = {ASSET_TAGS = (); }; };
+		B0C3B4451BB9E9670077D43C /* FTService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B4441BB9E9670077D43C /* FTService.m */; settings = {ASSET_TAGS = (); }; };
+		B0C3B44B1BB9EC500077D43C /* FTConferenceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B44A1BB9EC500077D43C /* FTConferenceProvider.m */; settings = {ASSET_TAGS = (); }; };
+		B0C3B44E1BB9EE9B0077D43C /* FTEventProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B44D1BB9EE9B0077D43C /* FTEventProvider.m */; settings = {ASSET_TAGS = (); }; };
+		B0C3B4511BB9EF750077D43C /* FTVideoProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B4501BB9EF750077D43C /* FTVideoProvider.m */; settings = {ASSET_TAGS = (); }; };
+		B0C3B4551BB9EF8A0077D43C /* FTPresenterProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B4541BB9EF8A0077D43C /* FTPresenterProvider.m */; settings = {ASSET_TAGS = (); }; };
+		B0C3B4581BB9F0650077D43C /* FTServiceConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B4571BB9F0650077D43C /* FTServiceConfiguration.m */; settings = {ASSET_TAGS = (); }; };
+		B0C3B45A1BB9F34B0077D43C /* FTServiceConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B4591BB9F34B0077D43C /* FTServiceConfigurationSpec.m */; settings = {ASSET_TAGS = (); }; };
+		B0C3B45D1BB9F8240077D43C /* FTConferenceProviderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B45C1BB9F8240077D43C /* FTConferenceProviderSpec.m */; settings = {ASSET_TAGS = (); }; };
+		B0C3B45F1BB9F8D00077D43C /* FTEventProviderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B45E1BB9F8D00077D43C /* FTEventProviderSpec.m */; settings = {ASSET_TAGS = (); }; };
+		B0C3B4611BB9F9670077D43C /* FTVideoProviderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B4601BB9F9670077D43C /* FTVideoProviderSpec.m */; settings = {ASSET_TAGS = (); }; };
+		B0C3B4631BB9F9750077D43C /* FTPresenterProviderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B4621BB9F9750077D43C /* FTPresenterProviderSpec.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,18 +52,35 @@
 		B01220361BB70F900018D566 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B01220381BB70F900018D566 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B01220391BB70F900018D566 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B012203B1BB70F900018D566 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B012203C1BB70F900018D566 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B012203F1BB70F900018D566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B01220411BB70F900018D566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B01220441BB70F900018D566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B01220461BB70F900018D566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B012204B1BB70F900018D566 /* ConfreaksMTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConfreaksMTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B012204F1BB70F900018D566 /* ConfreaksMTVTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfreaksMTVTests.m; sourceTree = "<group>"; };
 		B01220511BB70F900018D566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B01220561BB70F900018D566 /* ConfreaksMTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConfreaksMTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B012205A1BB70F900018D566 /* ConfreaksMTVUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfreaksMTVUITests.m; sourceTree = "<group>"; };
 		B012205C1BB70F900018D566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B07C21CD1BB74E78004D7095 /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
+		B0C3B4411BB9E9400077D43C /* FTServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTServiceSpec.m; sourceTree = "<group>"; };
+		B0C3B4431BB9E9670077D43C /* FTService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTService.h; sourceTree = "<group>"; };
+		B0C3B4441BB9E9670077D43C /* FTService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTService.m; sourceTree = "<group>"; };
+		B0C3B4471BB9EBA10077D43C /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
+		B0C3B4491BB9EC500077D43C /* FTConferenceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTConferenceProvider.h; sourceTree = "<group>"; };
+		B0C3B44A1BB9EC500077D43C /* FTConferenceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTConferenceProvider.m; sourceTree = "<group>"; };
+		B0C3B44C1BB9EE9B0077D43C /* FTEventProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTEventProvider.h; sourceTree = "<group>"; };
+		B0C3B44D1BB9EE9B0077D43C /* FTEventProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTEventProvider.m; sourceTree = "<group>"; };
+		B0C3B44F1BB9EF750077D43C /* FTVideoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTVideoProvider.h; sourceTree = "<group>"; };
+		B0C3B4501BB9EF750077D43C /* FTVideoProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTVideoProvider.m; sourceTree = "<group>"; };
+		B0C3B4531BB9EF8A0077D43C /* FTPresenterProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPresenterProvider.h; sourceTree = "<group>"; };
+		B0C3B4541BB9EF8A0077D43C /* FTPresenterProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPresenterProvider.m; sourceTree = "<group>"; };
+		B0C3B4561BB9F0650077D43C /* FTServiceConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTServiceConfiguration.h; sourceTree = "<group>"; };
+		B0C3B4571BB9F0650077D43C /* FTServiceConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTServiceConfiguration.m; sourceTree = "<group>"; };
+		B0C3B4591BB9F34B0077D43C /* FTServiceConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTServiceConfigurationSpec.m; sourceTree = "<group>"; };
+		B0C3B45C1BB9F8240077D43C /* FTConferenceProviderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTConferenceProviderSpec.m; sourceTree = "<group>"; };
+		B0C3B45E1BB9F8D00077D43C /* FTEventProviderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTEventProviderSpec.m; sourceTree = "<group>"; };
+		B0C3B4601BB9F9670077D43C /* FTVideoProviderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTVideoProviderSpec.m; sourceTree = "<group>"; };
+		B0C3B4621BB9F9750077D43C /* FTPresenterProviderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPresenterProviderSpec.m; sourceTree = "<group>"; };
 		DA0416859718DF45CE4C38A8 /* Pods-ConfreaksMTVTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTVTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,10 +152,9 @@
 		B01220341BB70F900018D566 /* ConfreaksMTV */ = {
 			isa = PBXGroup;
 			children = (
+				B0C3B43F1BB9E8BD0077D43C /* FTService */,
 				B01220381BB70F900018D566 /* AppDelegate.h */,
 				B01220391BB70F900018D566 /* AppDelegate.m */,
-				B012203B1BB70F900018D566 /* ViewController.h */,
-				B012203C1BB70F900018D566 /* ViewController.m */,
 				B012203E1BB70F900018D566 /* Main.storyboard */,
 				B01220411BB70F900018D566 /* Assets.xcassets */,
 				B01220431BB70F900018D566 /* LaunchScreen.storyboard */,
@@ -149,8 +175,9 @@
 		B012204E1BB70F900018D566 /* ConfreaksMTVTests */ = {
 			isa = PBXGroup;
 			children = (
-				B012204F1BB70F900018D566 /* ConfreaksMTVTests.m */,
+				B0C3B4401BB9E9060077D43C /* FTService */,
 				B01220511BB70F900018D566 /* Info.plist */,
+				B07C21CD1BB74E78004D7095 /* SpecHelper.h */,
 			);
 			path = ConfreaksMTVTests;
 			sourceTree = "<group>";
@@ -162,6 +189,63 @@
 				B012205C1BB70F900018D566 /* Info.plist */,
 			);
 			path = ConfreaksMTVUITests;
+			sourceTree = "<group>";
+		};
+		B0C3B43F1BB9E8BD0077D43C /* FTService */ = {
+			isa = PBXGroup;
+			children = (
+				B0C3B4481BB9EC3C0077D43C /* Providers */,
+				B0C3B4461BB9EA3F0077D43C /* Protocols */,
+				B0C3B4431BB9E9670077D43C /* FTService.h */,
+				B0C3B4441BB9E9670077D43C /* FTService.m */,
+				B0C3B4561BB9F0650077D43C /* FTServiceConfiguration.h */,
+				B0C3B4571BB9F0650077D43C /* FTServiceConfiguration.m */,
+			);
+			name = FTService;
+			sourceTree = "<group>";
+		};
+		B0C3B4401BB9E9060077D43C /* FTService */ = {
+			isa = PBXGroup;
+			children = (
+				B0C3B45B1BB9F8130077D43C /* Providers */,
+				B0C3B4411BB9E9400077D43C /* FTServiceSpec.m */,
+				B0C3B4591BB9F34B0077D43C /* FTServiceConfigurationSpec.m */,
+			);
+			name = FTService;
+			sourceTree = "<group>";
+		};
+		B0C3B4461BB9EA3F0077D43C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B0C3B4471BB9EBA10077D43C /* DataProvider.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		B0C3B4481BB9EC3C0077D43C /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				B0C3B4491BB9EC500077D43C /* FTConferenceProvider.h */,
+				B0C3B44A1BB9EC500077D43C /* FTConferenceProvider.m */,
+				B0C3B44C1BB9EE9B0077D43C /* FTEventProvider.h */,
+				B0C3B44D1BB9EE9B0077D43C /* FTEventProvider.m */,
+				B0C3B44F1BB9EF750077D43C /* FTVideoProvider.h */,
+				B0C3B4501BB9EF750077D43C /* FTVideoProvider.m */,
+				B0C3B4531BB9EF8A0077D43C /* FTPresenterProvider.h */,
+				B0C3B4541BB9EF8A0077D43C /* FTPresenterProvider.m */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		B0C3B45B1BB9F8130077D43C /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				B0C3B45C1BB9F8240077D43C /* FTConferenceProviderSpec.m */,
+				B0C3B45E1BB9F8D00077D43C /* FTEventProviderSpec.m */,
+				B0C3B4601BB9F9670077D43C /* FTVideoProviderSpec.m */,
+				B0C3B4621BB9F9750077D43C /* FTPresenterProviderSpec.m */,
+			);
+			name = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,8 +413,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B012203D1BB70F900018D566 /* ViewController.m in Sources */,
+				B0C3B4451BB9E9670077D43C /* FTService.m in Sources */,
 				B012203A1BB70F900018D566 /* AppDelegate.m in Sources */,
+				B0C3B4511BB9EF750077D43C /* FTVideoProvider.m in Sources */,
+				B0C3B44E1BB9EE9B0077D43C /* FTEventProvider.m in Sources */,
+				B0C3B44B1BB9EC500077D43C /* FTConferenceProvider.m in Sources */,
+				B0C3B4551BB9EF8A0077D43C /* FTPresenterProvider.m in Sources */,
+				B0C3B4581BB9F0650077D43C /* FTServiceConfiguration.m in Sources */,
 				B01220371BB70F900018D566 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,7 +428,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B01220501BB70F900018D566 /* ConfreaksMTVTests.m in Sources */,
+				B0C3B4631BB9F9750077D43C /* FTPresenterProviderSpec.m in Sources */,
+				B0C3B45D1BB9F8240077D43C /* FTConferenceProviderSpec.m in Sources */,
+				B0C3B4611BB9F9670077D43C /* FTVideoProviderSpec.m in Sources */,
+				B0C3B4421BB9E9400077D43C /* FTServiceSpec.m in Sources */,
+				B0C3B45F1BB9F8D00077D43C /* FTEventProviderSpec.m in Sources */,
+				B0C3B45A1BB9F34B0077D43C /* FTServiceConfigurationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
