@@ -10,7 +10,7 @@
 
 @implementation FTServiceConfiguration
 
--(NSURL *)apiURL {
+- (NSURL *)apiURL {
     return [NSURL URLWithString:@"http://confreaks.tv/api/v1/"];
 }
 

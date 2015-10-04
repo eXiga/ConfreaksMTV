@@ -10,6 +10,6 @@
 
 @interface FTServiceConfiguration : NSObject
 
--(NSURL *)apiURL;
+- (NSURL *)apiURL;
 
 @end
