@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataProvider.h"
+#import "FTBaseProvider.h"
 
-@interface FTVideoProvider : NSObject<DataProvider>
+@interface FTVideoProvider : FTBaseProvider
 
 @end

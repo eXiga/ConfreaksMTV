@@ -8,7 +8,7 @@
 
 #import "SpecHelper.h"
 #import "FTVideoProvider.h"
-#import "DataProvider.h"
+#import "FTBaseProvider.h"
 
 SpecBegin(FTVideoProvider)
 
@@ -19,9 +19,9 @@ describe(@"FTVideoProvider", ^{
         provider = [FTVideoProvider new];
     });
     
-    it(@"should conforms to DataProvider protocol", ^{
-        expect([provider conformsToProtocol:@protocol(DataProvider)]).to.beTruthy();
-    });  
+    it(@"should be a subclass of FTBaseProvider", ^{
+        expect([provider class]).to.beSubclassOf([FTBaseProvider class]);
+    });
 });
 
 SpecEnd

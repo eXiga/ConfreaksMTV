@@ -21,17 +21,17 @@
 
 @implementation FTService
 
-+(id)sharedInstance {
++ (id)sharedInstance {
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[self class] new];
+        sharedInstance = [FTService new];
     });
     
     return sharedInstance;
 }
 
--(instancetype)init {
+- (instancetype)init {
     self = [super init];
     if (self) {
         _configuration = [FTServiceConfiguration new];

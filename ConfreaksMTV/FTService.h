@@ -7,15 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataProvider.h"
+#import "FTConferenceProvider.h"
+#import "FTEventProvider.h"
+#import "FTVideoProvider.h"
+#import "FTPresenterProvider.h"
 
 @interface FTService : NSObject
 
-@property (strong, nonatomic) id<DataProvider> conferenceProvider;
-@property (strong, nonatomic) id<DataProvider> eventProvider;
-@property (strong, nonatomic) id<DataProvider> videoProvider;
-@property (strong, nonatomic) id<DataProvider> presenterProvider;
+@property (strong, nonatomic) FTConferenceProvider *conferenceProvider;
+@property (strong, nonatomic) FTEventProvider *eventProvider;
+@property (strong, nonatomic) FTVideoProvider *videoProvider;
+@property (strong, nonatomic) FTPresenterProvider *presenterProvider;
 
-+(id)sharedInstance;
++ (id)sharedInstance;
 
 @end

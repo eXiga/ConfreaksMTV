@@ -8,7 +8,7 @@
 
 #import "SpecHelper.h"
 #import "FTEventProvider.h"
-#import "DataProvider.h"
+#import "FTBaseProvider.h"
 
 SpecBegin(FTEventProvider)
 
@@ -19,9 +19,9 @@ describe(@"FTEventProvider", ^{
         provider = [FTEventProvider new];
     });
     
-    it(@"should conforms to DataProvider protocol", ^{
-        expect([provider conformsToProtocol:@protocol(DataProvider)]).to.beTruthy();
-    });  
+    it(@"should be a subclass of FTBaseProvider", ^{
+        expect([provider class]).to.beSubclassOf([FTBaseProvider class]);
+    });
 });
 
 SpecEnd
