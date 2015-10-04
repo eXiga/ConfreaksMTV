@@ -1,7 +1,7 @@
 platform :ios, '8.0'
 
-target 'ConfreaksMTV' do
-
+target 'ConfreaksMTV', exclusive: true do
+  pod 'Typhoon'
 end
 
 target 'ConfreaksMTVTests' do
