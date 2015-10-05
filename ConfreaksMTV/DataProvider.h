@@ -10,9 +10,13 @@
 
 typedef void(^FTResponseHandler)(_Nullable id object,  NSError * _Nullable  error);
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol DataProvider <NSObject>
 
-- (void)getAllEntitiesWithCompletionHandler:(_Nonnull FTResponseHandler)handler;
-- (void)getEntityForId:(_Nonnull id)entityId withCompletionHandler:(_Nonnull FTResponseHandler)handler;
+- (void)getAllEntitiesWithCompletionHandler:(FTResponseHandler)handler;
+- (void)getEntityForId:(id)entityId withCompletionHandler:(FTResponseHandler)handler;
 
 @end
+
+NS_ASSUME_NONNULL_END

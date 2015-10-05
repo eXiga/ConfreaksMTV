@@ -29,7 +29,7 @@ describe(@"FTBaseProvider", ^{
     
     it(@"should raise NotImplemented exception for getAll method", ^{
         expect(^{
-            [provider getAllEntitiesWithCompletionHandler:^(id _Nullable object, NSError * _Nullable error) {
+            [provider getAllEntitiesWithCompletionHandler:^(id object, NSError * error) {
                 
             }];
         }).to.raise(@"NotImplementedException");
@@ -37,7 +37,7 @@ describe(@"FTBaseProvider", ^{
     
     it(@"should raise NotImplemented excpetion for getOne method", ^{
         expect(^{
-            [provider getEntityForId:[NSNumber numberWithInt:1] withCompletionHandler:^(id _Nullable object, NSError * _Nullable error) {
+            [provider getEntityForId:[NSNumber numberWithInt:1] withCompletionHandler:^(id object, NSError * error) {
                 
             }];
         }).to.raise(@"NotImplementedException");

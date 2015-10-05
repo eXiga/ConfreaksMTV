@@ -9,10 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "DataProvider.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FTBaseProvider : NSObject<DataProvider>
 
-@property (nonatomic, strong) NSString * _Nullable endpointName;
+@property (nonatomic, strong) NSString * endpointName;
 
-- (_Nullable instancetype)initWithEndpointName: (NSString  * _Nonnull )endpoint;
+- (instancetype)initWithEndpointName: (NSString  *)endpoint;
 
 @end
+
+NS_ASSUME_NONNULL_END

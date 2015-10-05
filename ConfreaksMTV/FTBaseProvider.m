@@ -10,7 +10,7 @@
 
 @implementation FTBaseProvider
 
-- (_Nullable instancetype)initWithEndpointName:(NSString  * _Nonnull )endpoint {
+- (instancetype)initWithEndpointName:(NSString  *)endpoint {
     self = [super init];
     if (self) {
         _endpointName = endpoint;
