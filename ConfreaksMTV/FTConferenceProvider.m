@@ -8,6 +8,18 @@
 
 #import "FTConferenceProvider.h"
 
+NSString *const ConferencesEndpointName = @"conferences";
+
 @implementation FTConferenceProvider
+
+- (_Nullable instancetype)init {
+    self = [super initWithEndpointName:ConferencesEndpointName];
+    
+    if (self) {
+        
+    }
+    
+    return self;
+}
 
 @end

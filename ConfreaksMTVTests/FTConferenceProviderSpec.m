@@ -21,7 +21,11 @@ describe(@"FTConferenceProvider", ^{
     
     it(@"should be a subclass of FTBaseProvider", ^{
         expect([provider class]).to.beSubclassOf([FTBaseProvider class]);
-    });  
+    });
+    
+    it(@"should have endpoint property equal to conferences", ^{
+        expect(provider.endpointName).to.equal(@"conferences");
+    });
 });
 
 SpecEnd

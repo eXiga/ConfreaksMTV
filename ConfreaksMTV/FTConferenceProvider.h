@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "FTBaseProvider.h"
 
+FOUNDATION_EXPORT NSString *const ConferencesEndpointName;
+
 @interface FTConferenceProvider : FTBaseProvider
 
 @end
