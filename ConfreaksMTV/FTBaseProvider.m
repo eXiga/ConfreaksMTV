@@ -10,6 +10,15 @@
 
 @implementation FTBaseProvider
 
+- (_Nullable instancetype)initWithEndpointName:(NSString  * _Nonnull )endpoint {
+    self = [super init];
+    if (self) {
+        _endpointName = endpoint;
+    }
+
+    return self;
+}
+
 - (void)getAllEntitiesWithCompletionHandler:(FTResponseHandler)handler {
     [NSException raise:@"NotImplementedException" format:@"Method should be overrided in subclass"];
 }

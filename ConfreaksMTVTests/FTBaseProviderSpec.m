@@ -16,16 +16,20 @@ describe(@"FTBaseProvider", ^{
     __block FTBaseProvider *provider;
     
     beforeEach(^{
-        provider = [FTBaseProvider new];
+        provider = [[FTBaseProvider alloc] initWithEndpointName:@"endpoint"];
     });
     
     it(@"should conforms to DataProvider protocol", ^{
         expect([provider conformsToProtocol:@protocol(DataProvider)]).to.beTruthy();
     });
     
+    it(@"should have endpoint name", ^{
+        expect(provider.endpointName).notTo.beNil();
+    });
+    
     it(@"should raise NotImplemented exception for getAll method", ^{
         expect(^{
-            [provider getAllEntitiesWithCompletionHandler:^(id  _Nullable object, NSError * _Nullable error) {
+            [provider getAllEntitiesWithCompletionHandler:^(id _Nullable object, NSError * _Nullable error) {
                 
             }];
         }).to.raise(@"NotImplementedException");
@@ -33,7 +37,7 @@ describe(@"FTBaseProvider", ^{
     
     it(@"should raise NotImplemented excpetion for getOne method", ^{
         expect(^{
-            [provider getEntityForId:[NSNumber numberWithInt:1] withCompletionHandler:^(id  _Nullable object, NSError * _Nullable error) {
+            [provider getEntityForId:[NSNumber numberWithInt:1] withCompletionHandler:^(id _Nullable object, NSError * _Nullable error) {
                 
             }];
         }).to.raise(@"NotImplementedException");

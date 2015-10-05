@@ -11,4 +11,8 @@
 
 @interface FTBaseProvider : NSObject<DataProvider>
 
+@property (nonatomic, strong) NSString * _Nullable endpointName;
+
+- (_Nullable instancetype)initWithEndpointName: (NSString  * _Nonnull )endpoint;
+
 @end
