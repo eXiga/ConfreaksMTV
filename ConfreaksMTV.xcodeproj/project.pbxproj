@@ -289,7 +289,6 @@
 				B012202F1BB70F900018D566 /* Frameworks */,
 				B01220301BB70F900018D566 /* Resources */,
 				FA13641E03126184E485697B /* Copy Pods Resources */,
-				EA5BD47BF873CE4EAB6E3468 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,7 +308,6 @@
 				B01220481BB70F900018D566 /* Frameworks */,
 				B01220491BB70F900018D566 /* Resources */,
 				79FCC678FD463A4B51231B16 /* Copy Pods Resources */,
-				C7BEF99999FA1BF3BAAE66EA /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -452,36 +450,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C7BEF99999FA1BF3BAAE66EA /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA5BD47BF873CE4EAB6E3468 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfreaksMTV/Pods-ConfreaksMTV-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA13641E03126184E485697B /* Copy Pods Resources */ = {
