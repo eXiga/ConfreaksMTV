@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "DataProvider.h"
+#import "FTResourceDownloader.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FTBaseProvider : NSObject<DataProvider>
 
 @property (nonatomic, strong) NSString * endpointName;
+@property (nonatomic, strong) FTResourceDownloader *resourseDownloader;
 
 - (instancetype)initWithEndpointName: (NSString  *)endpoint;
 

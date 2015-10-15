@@ -29,6 +29,7 @@
 		B0C3B45F1BB9F8D00077D43C /* FTEventProviderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B45E1BB9F8D00077D43C /* FTEventProviderSpec.m */; settings = {ASSET_TAGS = (); }; };
 		B0C3B4611BB9F9670077D43C /* FTVideoProviderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B4601BB9F9670077D43C /* FTVideoProviderSpec.m */; settings = {ASSET_TAGS = (); }; };
 		B0C3B4631BB9F9750077D43C /* FTPresenterProviderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B4621BB9F9750077D43C /* FTPresenterProviderSpec.m */; settings = {ASSET_TAGS = (); }; };
+		D79BE1C71BD0251200085F27 /* FTResourceDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D79BE1C61BD0251200085F27 /* FTResourceDownloader.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		B0C3B4601BB9F9670077D43C /* FTVideoProviderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTVideoProviderSpec.m; sourceTree = "<group>"; };
 		B0C3B4621BB9F9750077D43C /* FTPresenterProviderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPresenterProviderSpec.m; sourceTree = "<group>"; };
 		BC951236FEC73AEF05EBED65 /* Pods-ConfreaksMTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfreaksMTV/Pods-ConfreaksMTV.release.xcconfig"; sourceTree = "<group>"; };
+		D79BE1C51BD0251200085F27 /* FTResourceDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTResourceDownloader.h; sourceTree = "<group>"; };
+		D79BE1C61BD0251200085F27 /* FTResourceDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTResourceDownloader.m; sourceTree = "<group>"; };
 		DA0416859718DF45CE4C38A8 /* Pods-ConfreaksMTVTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTVTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E73CB5900D7A87D29B6FD5D9 /* Pods-ConfreaksMTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfreaksMTV/Pods-ConfreaksMTV.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +210,7 @@
 		B0C3B43F1BB9E8BD0077D43C /* FTService */ = {
 			isa = PBXGroup;
 			children = (
+				D79BE1C41BD024ED00085F27 /* ResourceDownloader */,
 				B0C3B4481BB9EC3C0077D43C /* Providers */,
 				B0C3B4461BB9EA3F0077D43C /* Protocols */,
 				B0C3B4431BB9E9670077D43C /* FTService.h */,
@@ -264,6 +268,15 @@
 			name = Providers;
 			sourceTree = "<group>";
 		};
+		D79BE1C41BD024ED00085F27 /* ResourceDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				D79BE1C51BD0251200085F27 /* FTResourceDownloader.h */,
+				D79BE1C61BD0251200085F27 /* FTResourceDownloader.m */,
+			);
+			name = ResourceDownloader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +289,7 @@
 				B012202F1BB70F900018D566 /* Frameworks */,
 				B01220301BB70F900018D566 /* Resources */,
 				FA13641E03126184E485697B /* Copy Pods Resources */,
+				EA5BD47BF873CE4EAB6E3468 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,6 +309,7 @@
 				B01220481BB70F900018D566 /* Frameworks */,
 				B01220491BB70F900018D566 /* Resources */,
 				79FCC678FD463A4B51231B16 /* Copy Pods Resources */,
+				C7BEF99999FA1BF3BAAE66EA /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -439,6 +454,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C7BEF99999FA1BF3BAAE66EA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA5BD47BF873CE4EAB6E3468 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfreaksMTV/Pods-ConfreaksMTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FA13641E03126184E485697B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -463,6 +508,7 @@
 			files = (
 				B0C3B4451BB9E9670077D43C /* FTService.m in Sources */,
 				B012203A1BB70F900018D566 /* AppDelegate.m in Sources */,
+				D79BE1C71BD0251200085F27 /* FTResourceDownloader.m in Sources */,
 				B0C3B4511BB9EF750077D43C /* FTVideoProvider.m in Sources */,
 				B0C3B44E1BB9EE9B0077D43C /* FTEventProvider.m in Sources */,
 				B0C3B44B1BB9EC500077D43C /* FTConferenceProvider.m in Sources */,

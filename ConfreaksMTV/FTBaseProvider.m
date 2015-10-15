@@ -14,6 +14,13 @@
     self = [super init];
     if (self) {
         _endpointName = endpoint;
+        
+        // TODO(@chupa)
+        // redisign to something flexibale
+        // rebase base URL from ServiceConfiguration somewhere else
+        NSURL *baseUrl = [NSURL URLWithString:@"http://confreaks.tv/api/v1/"];
+        NSURL *url = [NSURL URLWithString:_endpointName relativeToURL:baseUrl];
+        _resourseDownloader = [[FTResourceDownloader alloc] initWithUrl:url];
     }
 
     return self;
