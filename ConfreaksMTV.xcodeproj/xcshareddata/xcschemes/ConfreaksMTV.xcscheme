@@ -20,6 +20,20 @@
                ReferencedContainer = "container:ConfreaksMTV.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B01220551BB70F900018D566"
+               BuildableName = "ConfreaksMTVUITests.xctest"
+               BlueprintName = "ConfreaksMTVUITests"
+               ReferencedContainer = "container:ConfreaksMTV.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -35,16 +49,6 @@
                BlueprintIdentifier = "B012204A1BB70F900018D566"
                BuildableName = "ConfreaksMTVTests.xctest"
                BlueprintName = "ConfreaksMTVTests"
-               ReferencedContainer = "container:ConfreaksMTV.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B01220551BB70F900018D566"
-               BuildableName = "ConfreaksMTVUITests.xctest"
-               BlueprintName = "ConfreaksMTVUITests"
                ReferencedContainer = "container:ConfreaksMTV.xcodeproj">
             </BuildableReference>
          </TestableReference>
