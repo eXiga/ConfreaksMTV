@@ -3,7 +3,7 @@ require 'rake'
 WORKSPACE_NAME = 'ConfreaksMTV.xcworkspace'
 SCHEME_NAME = "ConfreaksMTV"
 
-IPAD_AIR2_OS_9 = 'platform=iOS Simulator,name=iPad Air 2,OS=9.0'
+IPAD_AIR2_OS_9 = 'platform=iOS Simulator,name=iPad 2,OS=9.0'
 IPHONE_6_OS_9 = 'platform=iOS Simulator,name=iPhone 6,OS=9.0'
 
 def execute(command)
@@ -19,7 +19,7 @@ def test(scheme, device)
 end
 
 namespace :test do
-  desc 'Run specs on iPad Air 2, iOS 9'
+  desc 'Run specs on iPad 2, iOS 9'
   task :ipad do
     test(SCHEME_NAME, IPAD_AIR2_OS_9)
   end
