@@ -10,6 +10,10 @@ def execute(command)
   system(command) or raise "** BUILD FAILED **"
 end
 
+def build(scheme)
+  execute "xcodebuild -workspace #{WORKSPACE_NAME} -scheme #{scheme} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO"
+end
+
 def test(scheme, device)
   execute "xcodebuild test -workspace #{WORKSPACE_NAME} -scheme #{scheme} -sdk iphonesimulator -destination '#{device}' | xcpretty -tc && exit ${PIPESTATUS[0]}"
 end
@@ -24,6 +28,10 @@ namespace :test do
   task :iphone do
     test(SCHEME_NAME, IPHONE_6_OS_9)
   end
+end
+
+task :build do
+  build(SCHEME_NAME)
 end
 
 task default: 'test:ipad' #i don't know why i prefer to run tests on iPad
