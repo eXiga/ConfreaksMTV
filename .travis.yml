@@ -1,4 +1,0 @@
-language: objective-c
-xcode_workspace: ConfreaksMTV.xcworkspace
-xcode_scheme: ConfreaksMTV
-xcode_sdk: iphonesimulator8.1
