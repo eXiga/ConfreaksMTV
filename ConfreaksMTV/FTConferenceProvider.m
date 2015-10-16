@@ -23,7 +23,9 @@ NSString *const ConferencesEndpointName = @"conferences";
 }
 
 - (void)getAllEntitiesWithCompletionHandler:(FTResponseHandler)handler {
-    [self.resourseDownloader getResquestWithHandler:handler];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:self.url];
+    [FTResourceDownloader getResquest:request
+                          withHandler:handler];
 }
 
 @end

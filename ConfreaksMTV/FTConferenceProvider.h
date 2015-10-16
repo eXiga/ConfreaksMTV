@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FTBaseProvider.h"
+#import "FTResourceDownloader.h"
 
 FOUNDATION_EXPORT NSString *const ConferencesEndpointName;
 

@@ -27,10 +27,16 @@ describe(@"FTConferenceProvider", ^{
         expect(provider.endpointName).to.equal(@"conferences");
     });
     
+    it(@"should have url property equal to https://confreaks.tv/api/v1/conferences", ^{
+        NSURL *baseUrl = [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"FTBaseApiURL"]];
+        NSURL *resultUrl = [NSURL URLWithString:provider.endpointName relativeToURL:baseUrl];
+        expect(provider.url).to.equal(resultUrl);
+    });
+    
     context(@"when it's working with resources", ^{
         beforeEach(^{
             [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
-                return [request.URL.pathComponents containsObject:@"conferences.json"];
+                return [request.URL.pathComponents containsObject:@"conferences"];
             } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
                 NSString *fixturePath = OHPathForFileInBundle(@"conferences.json", OHResourceBundle(@"Fixtures", self.class));
                 return [OHHTTPStubsResponse responseWithFileAtPath:fixturePath
@@ -42,7 +48,7 @@ describe(@"FTConferenceProvider", ^{
         it(@"should get all conferences from service", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
-                    expect(object).to.haveACountOf(3);
+                    expect(object).to.haveACountOf(5);
                     done ();
                 }];
             });

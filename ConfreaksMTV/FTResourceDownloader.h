@@ -11,7 +11,7 @@
 
 @interface FTResourceDownloader : NSObject
 
-- (instancetype)initWithUrl: (NSURL *)url;
-- (void)getResquestWithHandler: (FTResponseHandler)handler;
++ (void)getResquest: (NSURLRequest *)request
+        withHandler: (FTResponseHandler)handler;
 
 @end

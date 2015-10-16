@@ -12,14 +12,13 @@ NSString *const BaseApiURL = @"FTBaseApiURL";
 
 @implementation FTBaseProvider
 
-- (instancetype)initWithEndpointName:(NSString  *)endpoint {
+- (instancetype)initWithEndpointName:(NSString *)endpoint {
     self = [super init];
     if (self) {
         _endpointName = endpoint;
 
         NSURL *baseUrl = [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:BaseApiURL]];
-        NSURL *url = [NSURL URLWithString:endpoint relativeToURL:baseUrl];
-        _resourseDownloader = [[FTResourceDownloader alloc] initWithUrl:url];
+        _url = [NSURL URLWithString:endpoint relativeToURL:baseUrl];
     }
 
     return self;

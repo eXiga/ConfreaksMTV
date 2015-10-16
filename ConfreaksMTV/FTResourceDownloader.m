@@ -8,30 +8,17 @@
 
 #import "FTResourceDownloader.h"
 
-@interface FTResourceDownloader()
-
-@property (nonatomic, strong) NSURLRequest *request;
-@property (nonatomic, strong) NSURLSession *session;
-
-@end
-
 @implementation FTResourceDownloader
 
-- (instancetype)initWithUrl:(NSURL *)url {
-    self = [super init];
-
-    if (self) {
-        _request = [[NSURLRequest alloc] initWithURL:url];
-        _session = [NSURLSession sharedSession];
-    }
-    
-    return self;
-}
-
-- (void)getResquestWithHandler:(FTResponseHandler)handler {
-    NSURLSessionDataTask *task = [self.session dataTaskWithRequest:self.request
-                                                 completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        handler(data, error);
++ (void)getResquest:(NSURLRequest *)request
+        withHandler:(FTResponseHandler)handler {
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
+                                            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                             options:kNilOptions
+                                                               error:nil];
+        handler(json, error);
     }];
     
     [task resume];

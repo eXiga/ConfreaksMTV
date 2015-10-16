@@ -27,10 +27,6 @@ describe(@"FTBaseProvider", ^{
         expect(provider.endpointName).notTo.beNil();
     });
     
-    it(@"should have resource downloader", ^{
-        expect(provider.resourseDownloader).notTo.beNil();
-    });
-    
     it(@"should get valid api url from bundle", ^{
         NSString *apiString = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"FTBaseApiURL"];
         expect(apiString).to.equal(@"https://confreaks.tv/api/v1/");
