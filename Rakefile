@@ -11,7 +11,7 @@ def execute(command)
 end
 
 def test(scheme, device)
-  execute "xcodebuild test -workspace #{WORKSPACE_NAME} -scheme #{scheme} -sdk iphonesimulator -destination '#{device}' | xcpretty -tc"
+  execute "xcodebuild test -workspace #{WORKSPACE_NAME} -scheme #{scheme} -sdk iphonesimulator -destination '#{device}' | xcpretty -tc && exit ${PIPESTATUS[0]}"
 end
 
 namespace :test do
