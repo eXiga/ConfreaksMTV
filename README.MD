@@ -1,6 +1,8 @@
 ConfreaksMTV
 ============
 
+[![Build Status](https://travis-ci.org/eXiga/ConfreaksMTV.svg?branch=master)](https://travis-ci.org/eXiga/ConfreaksMTV)
+
 iOS client application for [ConfreaksTV](http://confreaks.tv) web-site.
 
 Install
