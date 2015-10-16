@@ -1,4 +1,3 @@
 language: objective-c
-script:
-  - rake build
-  - rake test:ipad
+xcode_workspace: ConfreaksMTV.xcworkspace
+xcode_scheme: ConfreaksMTV
