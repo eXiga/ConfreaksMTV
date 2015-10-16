@@ -43,5 +43,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>FTBaseApiURL</key>
+	<string>https://confreaks.tv/api/v1/</string>
 </dict>
 </plist>

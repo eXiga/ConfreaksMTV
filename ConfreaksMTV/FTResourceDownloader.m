@@ -17,7 +17,7 @@
 
 @implementation FTResourceDownloader
 
-- (instancetype)initWithUrl: (NSURL *)url {
+- (instancetype)initWithUrl:(NSURL *)url {
     self = [super init];
 
     if (self) {

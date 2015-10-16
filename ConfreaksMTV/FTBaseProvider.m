@@ -8,18 +8,17 @@
 
 #import "FTBaseProvider.h"
 
+NSString *const BaseApiURL = @"FTBaseApiURL";
+
 @implementation FTBaseProvider
 
 - (instancetype)initWithEndpointName:(NSString  *)endpoint {
     self = [super init];
     if (self) {
         _endpointName = endpoint;
-        
-        // TODO(@chupa)
-        // redisign to something flexibale
-        // rebase base URL from ServiceConfiguration somewhere else
-        NSURL *baseUrl = [NSURL URLWithString:@"http://confreaks.tv/api/v1/"];
-        NSURL *url = [NSURL URLWithString:_endpointName relativeToURL:baseUrl];
+
+        NSURL *baseUrl = [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:BaseApiURL]];
+        NSURL *url = [NSURL URLWithString:endpoint relativeToURL:baseUrl];
         _resourseDownloader = [[FTResourceDownloader alloc] initWithUrl:url];
     }
 

@@ -27,7 +27,7 @@ describe(@"FTConferenceProvider", ^{
         expect(provider.endpointName).to.equal(@"conferences");
     });
     
-    describe(@"when it's workind with resources", ^{
+    context(@"when it's working with resources", ^{
         beforeEach(^{
             [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
                 return [request.URL.pathComponents containsObject:@"conferences.json"];
@@ -43,6 +43,7 @@ describe(@"FTConferenceProvider", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
                     expect(object).to.haveACountOf(3);
+                    done ();
                 }];
             });
         });
