@@ -23,8 +23,8 @@ describe(@"FTBaseProvider", ^{
         expect([provider conformsToProtocol:@protocol(DataProvider)]).to.beTruthy();
     });
     
-    it(@"should have endpoint name", ^{
-        expect(provider.endpointName).notTo.beNil();
+    it(@"should have valid resource url", ^{
+        expect(provider.url).notTo.beNil();
     });
     
     it(@"should get valid api url from bundle", ^{

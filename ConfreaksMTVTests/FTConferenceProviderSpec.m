@@ -23,13 +23,9 @@ describe(@"FTConferenceProvider", ^{
         expect([provider class]).to.beSubclassOf([FTBaseProvider class]);
     });
     
-    it(@"should have endpoint property equal to conferences", ^{
-        expect(provider.endpointName).to.equal(@"conferences");
-    });
-    
-    it(@"should have url property equal to https://confreaks.tv/api/v1/conferences", ^{
-        NSURL *baseUrl = [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"FTBaseApiURL"]];
-        NSURL *resultUrl = [NSURL URLWithString:provider.endpointName relativeToURL:baseUrl];
+    it(@"should have valid resource url: https://confreaks.tv/api/v1/conferences", ^{
+        NSURL *baseUrl = [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:BaseApiURL]];
+        NSURL *resultUrl = [NSURL URLWithString:ConferencesEndpointName relativeToURL:baseUrl];
         expect(provider.url).to.equal(resultUrl);
     });
     

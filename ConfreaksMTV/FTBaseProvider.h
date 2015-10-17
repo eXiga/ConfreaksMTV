@@ -15,7 +15,6 @@ FOUNDATION_EXPORT NSString *const BaseApiURL;
 
 @interface FTBaseProvider : NSObject<DataProvider>
 
-@property (nonatomic, strong) NSString *endpointName;
 @property (nonatomic, strong) NSURL *url;
 
 - (instancetype)initWithEndpointName: (NSString *)endpoint;

@@ -15,8 +15,6 @@ NSString *const BaseApiURL = @"FTBaseApiURL";
 - (instancetype)initWithEndpointName:(NSString *)endpoint {
     self = [super init];
     if (self) {
-        _endpointName = endpoint;
-
         NSURL *baseUrl = [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:BaseApiURL]];
         _url = [NSURL URLWithString:endpoint relativeToURL:baseUrl];
     }
