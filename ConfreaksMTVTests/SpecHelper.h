@@ -19,4 +19,6 @@
 #define MOCKITO_SHORTHAND
 #import <OCMockito/OCMockito.h>
 
+#define FIXTURE(x) OHPathForFileInBundle(@ #x ".json", OHResourceBundle(@"Fixtures", self.class))
+
 #endif /* SpecHelper_h */

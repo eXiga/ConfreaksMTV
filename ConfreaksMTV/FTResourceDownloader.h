@@ -6,12 +6,14 @@
 //  Copyright © 2015 Anton Kostenich. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "DataProvider.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface FTResourceDownloader : NSObject
 
-+ (void)getResquest: (NSURLRequest *)request
-        withHandler: (FTResponseHandler)handler;
++ (void)getRequest:(NSURLRequest *)request withHandler:(FTResponseHandler)handler;
 
 @end
+
+NS_ASSUME_NONNULL_END

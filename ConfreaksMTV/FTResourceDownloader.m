@@ -10,8 +10,7 @@
 
 @implementation FTResourceDownloader
 
-+ (void)getResquest:(NSURLRequest *)request
-        withHandler:(FTResponseHandler)handler {
++ (void)getRequest:(NSURLRequest *)request withHandler:(FTResponseHandler)handler {
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request
                                             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {

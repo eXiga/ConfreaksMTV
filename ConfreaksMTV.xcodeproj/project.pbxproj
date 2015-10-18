@@ -16,6 +16,7 @@
 		B01220451BB70F900018D566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01220431BB70F900018D566 /* LaunchScreen.storyboard */; };
 		B012205B1BB70F900018D566 /* ConfreaksMTVUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B012205A1BB70F900018D566 /* ConfreaksMTVUITests.m */; };
 		B0535BA51BD0748800B583E7 /* Fixtures.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0535BA41BD0748800B583E7 /* Fixtures.bundle */; settings = {ASSET_TAGS = (); }; };
+		B06646B71BD319AC00D2041A /* FTResourceDownloaderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B06646B61BD319AC00D2041A /* FTResourceDownloaderSpec.m */; settings = {ASSET_TAGS = (); }; };
 		B07690051BC1E899008C8573 /* FTBaseProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B07690041BC1E899008C8573 /* FTBaseProvider.m */; settings = {ASSET_TAGS = (); }; };
 		B07690071BC1E8B6008C8573 /* FTBaseProviderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B07690061BC1E8B6008C8573 /* FTBaseProviderSpec.m */; settings = {ASSET_TAGS = (); }; };
 		B0C3B4421BB9E9400077D43C /* FTServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C3B4411BB9E9400077D43C /* FTServiceSpec.m */; settings = {ASSET_TAGS = (); }; };
@@ -68,6 +69,7 @@
 		B012205A1BB70F900018D566 /* ConfreaksMTVUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfreaksMTVUITests.m; sourceTree = "<group>"; };
 		B012205C1BB70F900018D566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0535BA41BD0748800B583E7 /* Fixtures.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Fixtures.bundle; sourceTree = "<group>"; };
+		B06646B61BD319AC00D2041A /* FTResourceDownloaderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTResourceDownloaderSpec.m; sourceTree = "<group>"; };
 		B07690031BC1E899008C8573 /* FTBaseProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBaseProvider.h; sourceTree = "<group>"; };
 		B07690041BC1E899008C8573 /* FTBaseProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTBaseProvider.m; sourceTree = "<group>"; };
 		B07690061BC1E8B6008C8573 /* FTBaseProviderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTBaseProviderSpec.m; sourceTree = "<group>"; };
@@ -210,6 +212,14 @@
 			path = ConfreaksMTVUITests;
 			sourceTree = "<group>";
 		};
+		B06646B51BD3198B00D2041A /* ResourceDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				B06646B61BD319AC00D2041A /* FTResourceDownloaderSpec.m */,
+			);
+			name = ResourceDownloader;
+			sourceTree = "<group>";
+		};
 		B0C3B43F1BB9E8BD0077D43C /* FTService */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +237,7 @@
 		B0C3B4401BB9E9060077D43C /* FTService */ = {
 			isa = PBXGroup;
 			children = (
+				B06646B51BD3198B00D2041A /* ResourceDownloader */,
 				B0C3B45B1BB9F8130077D43C /* Providers */,
 				B0C3B4411BB9E9400077D43C /* FTServiceSpec.m */,
 				B0C3B4591BB9F34B0077D43C /* FTServiceConfigurationSpec.m */,
@@ -496,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C3B4631BB9F9750077D43C /* FTPresenterProviderSpec.m in Sources */,
+				B06646B71BD319AC00D2041A /* FTResourceDownloaderSpec.m in Sources */,
 				B0C3B45D1BB9F8240077D43C /* FTConferenceProviderSpec.m in Sources */,
 				B0C3B4611BB9F9670077D43C /* FTVideoProviderSpec.m in Sources */,
 				B0C3B4421BB9E9400077D43C /* FTServiceSpec.m in Sources */,
