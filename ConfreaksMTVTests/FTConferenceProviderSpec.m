@@ -23,8 +23,36 @@ describe(@"FTConferenceProvider", ^{
         expect([provider class]).to.beSubclassOf([FTBaseProvider class]);
     });
     
-    it(@"should have endpoint property equal to conferences", ^{
-        expect(provider.endpointName).to.equal(@"conferences");
+    it(@"should have valid resource url: https://confreaks.tv/api/v1/conferences", ^{
+        NSURL *baseUrl = [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:BaseApiURL]];
+        NSURL *resultUrl = [NSURL URLWithString:ConferencesEndpointName relativeToURL:baseUrl];
+        expect(provider.url).to.equal(resultUrl);
+    });
+    
+    context(@"when it's working with resources", ^{
+        beforeEach(^{
+            [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+                return [request.URL.pathComponents containsObject:@"conferences"];
+            } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+                NSString *fixturePath = OHPathForFileInBundle(@"conferences.json", OHResourceBundle(@"Fixtures", self.class));
+                return [OHHTTPStubsResponse responseWithFileAtPath:fixturePath
+                                                        statusCode:200
+                                                           headers:@{@"Content-Type":@"application/json"}];
+            }];
+        });
+        
+        it(@"should get all conferences from service", ^{
+            waitUntil(^(DoneCallback done) {
+                [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
+                    expect(object).to.haveACountOf(5);
+                    done ();
+                }];
+            });
+        });
+        
+        afterEach(^{
+            [OHHTTPStubs removeAllStubs];
+        });
     });
 });
 

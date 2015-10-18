@@ -11,11 +11,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+FOUNDATION_EXPORT NSString *const BaseApiURL;
+
 @interface FTBaseProvider : NSObject<DataProvider>
 
-@property (nonatomic, strong) NSString * endpointName;
+@property (nonatomic, strong) NSURL *url;
 
-- (instancetype)initWithEndpointName: (NSString  *)endpoint;
+- (instancetype)initWithEndpointName: (NSString *)endpoint;
 
 @end
 

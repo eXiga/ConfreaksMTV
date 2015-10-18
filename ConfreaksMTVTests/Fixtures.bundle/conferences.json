@@ -1,0 +1,21 @@
+[
+    {
+        "name":"Acts as Conference","id":6,"event_count":1
+    },
+
+    {
+        "name":"Adhearsion Conf","id":75,"event_count":2
+    },
+
+    {
+        "name":"Agile Roots","id":4,"event_count":2
+    },
+
+    {
+        "name":"Airbnb Tech Talks","id":58,"event_count":2
+    },
+
+    {
+        "name":"Aloha Ruby","id":38,"event_count":1
+    }
+]

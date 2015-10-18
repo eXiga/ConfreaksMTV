@@ -23,8 +23,13 @@ describe(@"FTBaseProvider", ^{
         expect([provider conformsToProtocol:@protocol(DataProvider)]).to.beTruthy();
     });
     
-    it(@"should have endpoint name", ^{
-        expect(provider.endpointName).notTo.beNil();
+    it(@"should have valid resource url", ^{
+        expect(provider.url).notTo.beNil();
+    });
+    
+    it(@"should get valid api url from bundle", ^{
+        NSString *apiString = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"FTBaseApiURL"];
+        expect(apiString).to.equal(@"https://confreaks.tv/api/v1/");
     });
     
     it(@"should raise NotImplemented exception for getAll method", ^{
