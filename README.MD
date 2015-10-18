@@ -2,6 +2,7 @@ ConfreaksMTV
 ============
 
 [![Build Status](https://travis-ci.org/eXiga/ConfreaksMTV.svg?branch=master)](https://travis-ci.org/eXiga/ConfreaksMTV)
+[![Coverage Status](https://coveralls.io/repos/eXiga/ConfreaksMTV/badge.svg?branch=master&service=github)](https://coveralls.io/github/eXiga/ConfreaksMTV?branch=master)
 
 iOS client application for [ConfreaksTV](http://confreaks.tv) web-site.
 
