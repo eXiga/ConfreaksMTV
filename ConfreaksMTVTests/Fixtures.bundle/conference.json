@@ -1,0 +1,14 @@
+{
+    "id":38,
+    "name":"Aloha Ruby",
+    "event_count":1,
+    "events":
+        [
+            {
+                "id":66,
+                "short_code":"aloharuby2012",
+                "start_at":"2012-10-08T07:00:00.000Z",
+                "end_at":"2012-10-09T07:00:00.000Z"
+            }
+         ]
+}

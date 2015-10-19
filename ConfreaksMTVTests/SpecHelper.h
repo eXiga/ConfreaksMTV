@@ -19,6 +19,11 @@
 #define MOCKITO_SHORTHAND
 #import <OCMockito/OCMockito.h>
 
+
+#pragma mark - OHTTPStubs macros
+
 #define FIXTURE(x) OHPathForFileInBundle(@ #x ".json", OHResourceBundle(@"Fixtures", self.class))
+#define SUCCESS_STATUS_CODE 200
+#define DEFAULT_HEADERS @{@"Content-Type":@"application/json"}
 
 #endif /* SpecHelper_h */

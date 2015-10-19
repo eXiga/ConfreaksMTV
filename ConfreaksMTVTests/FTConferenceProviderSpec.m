@@ -29,15 +29,14 @@ describe(@"FTConferenceProvider", ^{
         expect(provider.url).to.equal(resultUrl);
     });
     
-    context(@"when it's working with resources", ^{
+    context(@"when it's working with all conferences", ^{
         beforeEach(^{
             [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
-                return [request.URL.pathComponents containsObject:@"conferences"];
+                return [request.URL.lastPathComponent isEqualToString:@"conferences"];
             } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
-                NSString *fixturePath = OHPathForFileInBundle(@"conferences.json", OHResourceBundle(@"Fixtures", self.class));
-                return [OHHTTPStubsResponse responseWithFileAtPath:fixturePath
-                                                        statusCode:200
-                                                           headers:@{@"Content-Type":@"application/json"}];
+                return [OHHTTPStubsResponse responseWithFileAtPath:FIXTURE(conferences)
+                                                        statusCode:SUCCESS_STATUS_CODE
+                                                           headers:DEFAULT_HEADERS];
             }];
         });
         
@@ -45,6 +44,31 @@ describe(@"FTConferenceProvider", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
                     expect(object).to.haveACountOf(5);
+                    done ();
+                }];
+            });
+        });
+        
+        afterEach(^{
+            [OHHTTPStubs removeAllStubs];
+        });
+    });
+    
+    context(@"when it's working with one conference", ^{
+        beforeEach(^{
+            [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+                return [request.URL.lastPathComponent isEqualToString:@"aloha-ruby"];
+            } withStubResponse:^OHHTTPStubsResponse * _Nonnull(NSURLRequest * _Nonnull request) {
+                return [OHHTTPStubsResponse responseWithFileAtPath:FIXTURE(conference)
+                                                        statusCode:SUCCESS_STATUS_CODE
+                                                           headers:DEFAULT_HEADERS];
+            }];
+        });
+        
+        it(@"should get one conference for name from service", ^{
+            waitUntil(^(DoneCallback done) {
+                [provider getEntityForId:@"aloha-ruby" withCompletionHandler:^(id  _Nullable object, NSError * _Nullable error) {
+                    expect(object[@"name"]).to.equal(@"Aloha Ruby");
                     done ();
                 }];
             });

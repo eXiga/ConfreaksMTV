@@ -17,7 +17,7 @@ FOUNDATION_EXPORT NSString *const BaseApiURL;
 
 @property (nonatomic, strong) NSURL *url;
 
-- (instancetype)initWithEndpointName: (NSString *)endpoint;
+- (_Nullable instancetype)initWithEndpointName: (NSString *)endpoint;
 
 @end
 

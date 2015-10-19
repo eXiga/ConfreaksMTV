@@ -12,7 +12,7 @@ NSString *const ConferencesEndpointName = @"conferences";
 
 @implementation FTConferenceProvider
 
-- (_Nullable instancetype)init {
+- (instancetype)init {
     self = [super initWithEndpointName:ConferencesEndpointName];
     
     if (self) {
@@ -24,6 +24,13 @@ NSString *const ConferencesEndpointName = @"conferences";
 
 - (void)getAllEntitiesWithCompletionHandler:(FTResponseHandler)handler {
     NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
+    [FTResourceDownloader getRequest:request withHandler:handler];
+}
+
+- (void)getEntityForId:(id)entityId withCompletionHandler:(FTResponseHandler)handler {
+    NSString *conferenceName = (NSString *)entityId;
+    NSURL *conferenceUrl = [self.url URLByAppendingPathComponent:conferenceName];
+    NSURLRequest *request = [NSURLRequest requestWithURL:conferenceUrl];
     [FTResourceDownloader getRequest:request withHandler:handler];
 }
 
