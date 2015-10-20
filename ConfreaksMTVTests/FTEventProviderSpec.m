@@ -19,17 +19,17 @@ describe(@"FTEventProvider", ^{
         provider = [FTEventProvider new];
     });
     
-    it(@"should be a subclass of FTBaseProvider", ^{
+    it(@"is expected to be a subclass of FTBaseProvider", ^{
         expect([provider class]).to.beSubclassOf([FTBaseProvider class]);
     });
     
-    it(@"should have valid resource url: https://confreaks.tv/api/v1/events", ^{
+    it(@"is expected to have valid resource url: https://confreaks.tv/api/v1/events", ^{
         NSURL *baseUrl = [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:BaseApiURL]];
         NSURL *resultUrl = [NSURL URLWithString:EventsEndpointName relativeToURL:baseUrl];
         expect(provider.url).to.equal(resultUrl);
     });
     
-    context(@"when it's working with all events", ^{
+    describe(@"#getAllEntitiesWithCompletionHandler:", ^{
         beforeEach(^{
             [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
                 return [request.URL.lastPathComponent isEqualToString:@"events"];
@@ -40,7 +40,7 @@ describe(@"FTEventProvider", ^{
             }];
         });
         
-        it(@"should get all conferences from service", ^{
+        it(@"is expected to get all event from service", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
                     expect(object).to.haveACountOf(5);
@@ -54,28 +54,70 @@ describe(@"FTEventProvider", ^{
         });
     });
     
-    context(@"when it's working with one event", ^{
+    describe(@"#getEntityForId:WithCompletionHandler:", ^{
+        context(@"when working with shortcode", ^{
+            beforeEach(^{
+                [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+                    return ([request.URL.lastPathComponent isEqualToString:@"g5thrive"]);
+                } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+                    return [OHHTTPStubsResponse responseWithFileAtPath:FIXTURE(event)
+                                                            statusCode:SUCCESS_STATUS_CODE
+                                                               headers:DEFAULT_HEADERS];
+                }];
+            });
+            
+            it(@"is expected to get one event from service", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getEntityForId:@"g5thrive" withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).toNot.beNil();
+                        done();
+                    }];
+                });
+            });
+            
+            afterEach(^{
+                [OHHTTPStubs removeAllStubs];
+            });
+        });
+        
+        context(@"when working with id", ^{
+            beforeEach(^{
+                [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+                    return ([request.URL.lastPathComponent isEqualToString:@"42"]);
+                } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+                    return [OHHTTPStubsResponse responseWithFileAtPath:FIXTURE(event)
+                                                            statusCode:SUCCESS_STATUS_CODE
+                                                               headers:DEFAULT_HEADERS];
+                }];
+            });
+            
+            it(@"is expected to get one event from service", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getEntityForId:@42 withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).toNot.beNil();
+                        done();
+                    }];
+                });
+            });
+            
+            afterEach(^{
+                [OHHTTPStubs removeAllStubs];
+            });
+        });
+    });
+    
+    describe(@"#getVideosForEvent:WithCompletionHandler:", ^{
         beforeEach(^{
             [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
-                return ([request.URL.lastPathComponent isEqualToString:@"42"] ||
-                        [request.URL.lastPathComponent isEqualToString:@"videos"]);
+                return ([request.URL.lastPathComponent isEqualToString:@"videos"]);
             } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
-                return [OHHTTPStubsResponse responseWithFileAtPath:[request.URL.lastPathComponent isEqualToString:@"42"] ? FIXTURE(event) : FIXTURE(event_videos)
+                return [OHHTTPStubsResponse responseWithFileAtPath:FIXTURE(event_videos)
                                                         statusCode:SUCCESS_STATUS_CODE
                                                            headers:DEFAULT_HEADERS];
             }];
         });
-        
-        it(@"should get one conference from service", ^{
-            waitUntil(^(DoneCallback done) {
-                [provider getEntityForId:@42 withCompletionHandler:^(id object, NSError *error) {
-                    expect(object).toNot.beNil();
-                    done();
-                }];
-            });
-        });
-        
-        it(@"should get all event's videos", ^{
+
+        it(@"is expected to get all event's videos", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getVideosForEvent:@42 withCompletionHandler:^(id object, NSError *error) {
                     expect(object).to.haveACountOf(5);
@@ -89,7 +131,7 @@ describe(@"FTEventProvider", ^{
         });
     });
     
-    context(@"when it's fetching events count", ^{
+    describe(@"#getEventCountWithCompletionHandler:", ^{
         beforeEach(^{
             [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
                 return [request.URL.lastPathComponent isEqualToString:@"event_count"];
@@ -100,9 +142,9 @@ describe(@"FTEventProvider", ^{
             }];
         });
         
-        it(@"should return event count from service", ^{
+        it(@"is expected to get events count from service", ^{
             waitUntil(^(DoneCallback done) {
-                [provider getEventCount:^(id object, NSError *error) {
+                [provider getEventCountWithCompletionHandler:^(id object, NSError *error) {
                     expect(object).toNot.beNil();
                     done();
                 }];
@@ -112,6 +154,7 @@ describe(@"FTEventProvider", ^{
         afterEach(^{
             [OHHTTPStubs removeAllStubs];
         });
+
     });
 });
 

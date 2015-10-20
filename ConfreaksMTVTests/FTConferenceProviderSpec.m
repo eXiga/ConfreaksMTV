@@ -19,17 +19,17 @@ describe(@"FTConferenceProvider", ^{
         provider = [FTConferenceProvider new];
     });
     
-    it(@"should be a subclass of FTBaseProvider", ^{
+    it(@"is expected to be a subclass of FTBaseProvider", ^{
         expect([provider class]).to.beSubclassOf([FTBaseProvider class]);
     });
     
-    it(@"should have valid resource url: https://confreaks.tv/api/v1/conferences", ^{
+    it(@"is expected to have valid resource url: https://confreaks.tv/api/v1/conferences", ^{
         NSURL *baseUrl = [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:BaseApiURL]];
         NSURL *resultUrl = [NSURL URLWithString:ConferencesEndpointName relativeToURL:baseUrl];
         expect(provider.url).to.equal(resultUrl);
     });
     
-    context(@"when it's working with all conferences", ^{
+    describe(@"#getAllEntitiesWithCompletionHandler:", ^{
         beforeEach(^{
             [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
                 return [request.URL.lastPathComponent isEqualToString:@"conferences"];
@@ -40,7 +40,7 @@ describe(@"FTConferenceProvider", ^{
             }];
         });
         
-        it(@"should get all conferences from service", ^{
+        it(@"is expected to get all conferences from service", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
                     expect(object).to.haveACountOf(5);
@@ -54,28 +54,55 @@ describe(@"FTConferenceProvider", ^{
         });
     });
     
-    context(@"when it's working with one conference", ^{
-        beforeEach(^{
-            [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
-                return [request.URL.lastPathComponent isEqualToString:@"aloha-ruby"];
-            } withStubResponse:^OHHTTPStubsResponse * (NSURLRequest * request) {
-                return [OHHTTPStubsResponse responseWithFileAtPath:FIXTURE(conference)
-                                                        statusCode:SUCCESS_STATUS_CODE
-                                                           headers:DEFAULT_HEADERS];
-            }];
-        });
-        
-        it(@"should get one conference for name from service", ^{
-            waitUntil(^(DoneCallback done) {
-                [provider getEntityForId:@"aloha-ruby" withCompletionHandler:^(id object, NSError *error) {
-                    expect(object).toNot.beNil();
-                    done();
+    describe(@"#getEntityForId:WithCompletionHandler:", ^{
+        context(@"when working with id", ^{
+            beforeEach(^{
+                [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+                    return [request.URL.lastPathComponent isEqualToString:@"aloha-ruby"];
+                } withStubResponse:^OHHTTPStubsResponse * (NSURLRequest * request) {
+                    return [OHHTTPStubsResponse responseWithFileAtPath:FIXTURE(conference)
+                                                            statusCode:SUCCESS_STATUS_CODE
+                                                               headers:DEFAULT_HEADERS];
                 }];
+            });
+            
+            it(@"is expected to get one conference from service", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getEntityForId:@"aloha-ruby" withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).toNot.beNil();
+                        done();
+                    }];
+                });
+            });
+            
+            afterEach(^{
+                [OHHTTPStubs removeAllStubs];
             });
         });
         
-        afterEach(^{
-            [OHHTTPStubs removeAllStubs];
+        context(@"when working with name", ^{
+            beforeEach(^{
+                [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+                    return [request.URL.lastPathComponent isEqualToString:@"38"];
+                } withStubResponse:^OHHTTPStubsResponse * (NSURLRequest * request) {
+                    return [OHHTTPStubsResponse responseWithFileAtPath:FIXTURE(conference)
+                                                            statusCode:SUCCESS_STATUS_CODE
+                                                               headers:DEFAULT_HEADERS];
+                }];
+            });
+            
+            it(@"is expected to get one conference from service", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getEntityForId:@38 withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).toNot.beNil();
+                        done();
+                    }];
+                });
+            });
+            
+            afterEach(^{
+                [OHHTTPStubs removeAllStubs];
+            });
         });
     });
 });

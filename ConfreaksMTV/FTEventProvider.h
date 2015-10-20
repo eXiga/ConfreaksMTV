@@ -15,7 +15,7 @@ FOUNDATION_EXPORT NSString *const EventsVideosResourceName;
 
 @interface FTEventProvider : FTBaseProvider
 
-- (void)getEventCount:(FTResponseHandler)handler;
+- (void)getEventCountWithCompletionHandler:(FTResponseHandler)handler;
 - (void)getVideosForEvent:(id)entityId withCompletionHandler:(FTResponseHandler)handler;
 
 @end
