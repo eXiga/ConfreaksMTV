@@ -11,7 +11,7 @@
 #import "FTBaseProvider.h"
 
 SpecBegin(FTPresenterProvider)
-//aaron-bedra 22
+
 describe(@"FTPresenterProvider", ^{
     __block FTPresenterProvider *provider = nil;
     
