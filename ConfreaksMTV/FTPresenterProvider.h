@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "FTBaseProvider.h"
 
+FOUNDATION_EXPORT NSString *const PresentersEndpointName;
+FOUNDATION_EXPORT NSString *const PresentersVideosResourceName;
+
 @interface FTPresenterProvider : FTBaseProvider
+
+- (void)getVideosForPresenter:(id)entityId withCompletionHandler:(FTResponseHandler)handler;
 
 @end
