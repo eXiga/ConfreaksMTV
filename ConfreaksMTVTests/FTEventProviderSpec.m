@@ -116,13 +116,26 @@ describe(@"FTEventProvider", ^{
                                                            headers:DEFAULT_HEADERS];
             }];
         });
-
-        it(@"is expected to get all event's videos", ^{
-            waitUntil(^(DoneCallback done) {
-                [provider getVideosForEvent:@42 withCompletionHandler:^(id object, NSError *error) {
-                    expect(object).to.haveACountOf(5);
-                    done();
-                }];
+        
+        context(@"when working with id", ^{
+            it(@"is expected to get all event's videos", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getVideosForEvent:@42 withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.haveACountOf(5);
+                        done();
+                    }];
+                });
+            });
+        });
+        
+        context(@"when working with shortcode", ^{
+            it(@"is expected to get all event's videos", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getVideosForEvent:@"g5thrive" withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.haveACountOf(5);
+                        done();
+                    }];
+                });
             });
         });
         
@@ -154,7 +167,6 @@ describe(@"FTEventProvider", ^{
         afterEach(^{
             [OHHTTPStubs removeAllStubs];
         });
-
     });
 });
 
