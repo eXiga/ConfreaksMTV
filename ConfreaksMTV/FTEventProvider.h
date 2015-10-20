@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "FTBaseProvider.h"
 
+FOUNDATION_EXPORT NSString *const EventsEndpointName;
+FOUNDATION_EXPORT NSString *const EventsCountResourceName;
+FOUNDATION_EXPORT NSString *const EventsVideosResourceName;
+
 @interface FTEventProvider : FTBaseProvider
+
+- (void)getEventCount:(FTResponseHandler)handler;
+- (void)getVideosForEvent:(id)entityId withCompletionHandler:(FTResponseHandler)handler;
 
 @end

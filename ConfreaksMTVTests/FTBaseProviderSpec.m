@@ -28,7 +28,7 @@ describe(@"FTBaseProvider", ^{
     });
     
     it(@"should get valid api url from bundle", ^{
-        NSString *apiString = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"FTBaseApiURL"];
+        NSString *apiString = [[provider baseUrl] absoluteString];
         expect(apiString).to.equal(@"https://confreaks.tv/api/v1/");
     });
     
