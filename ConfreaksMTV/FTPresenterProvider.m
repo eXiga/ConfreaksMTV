@@ -24,11 +24,6 @@ NSString *const PresentersVideosResourceName = @"videos";
     return self;
 }
 
-- (void)getAllEntitiesWithCompletionHandler:(FTResponseHandler)handler {
-    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
-    [FTResourceDownloader getRequest:request withHandler:handler];
-}
-
 - (void)getEntityForId:(id)entityId withCompletionHandler:(FTResponseHandler)handler {
     NSString *presenterId = [entityId isKindOfClass:[NSString class]] ? (NSString *)entityId : [entityId stringValue];
     NSURL *presenterUrl = [self.url URLByAppendingPathComponent:presenterId];

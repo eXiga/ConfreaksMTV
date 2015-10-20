@@ -27,14 +27,8 @@ NSString *const VideoFeaturedResourceName = @"featured-video";
     return self;
 }
 
-// You probably should NEVER use this method, cuz JSON is big af
-- (void)getAllEntitiesWithCompletionHandler:(FTResponseHandler)handler {
-    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
-    [FTResourceDownloader getRequest:request withHandler:handler];
-}
-
 - (void)getAllEntitiesUsingLimit:(NSNumber *)limit orderedByDescending:(BOOL)ordered withCompletionHandler:(FTResponseHandler)handler {
-    NSString *queryString = [NSString stringWithFormat:@"limit=%i", [limit integerValue]];
+    NSString *queryString = [NSString stringWithFormat:@"limit=%li", (long)[limit integerValue]];
     
     if (ordered) {
         queryString = [NSString stringWithFormat:@"%@&sort=most_viewed", queryString];

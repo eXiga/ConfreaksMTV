@@ -8,7 +8,7 @@
 
 #import "SpecHelper.h"
 #import "FTBaseProvider.h"
-
+#import "FTResourceDownloader.h"
 
 SpecBegin(FTBaseProvider)
 
@@ -19,33 +19,17 @@ describe(@"FTBaseProvider", ^{
         provider = [[FTBaseProvider alloc] initWithEndpointName:@"endpoint"];
     });
     
-    it(@"should conforms to DataProvider protocol", ^{
+    it(@"is expected to conform to DataProvider protocol", ^{
         expect([provider conformsToProtocol:@protocol(DataProvider)]).to.beTruthy();
     });
     
-    it(@"should have valid resource url", ^{
+    it(@"is expected to have valid resource url", ^{
         expect(provider.url).notTo.beNil();
     });
     
-    it(@"should get valid api url from bundle", ^{
+    it(@"is expected to get valid api url from bundle", ^{
         NSString *apiString = [[provider baseUrl] absoluteString];
         expect(apiString).to.equal(@"https://confreaks.tv/api/v1/");
-    });
-    
-    it(@"should raise NotImplemented exception for getAll method", ^{
-        expect(^{
-            [provider getAllEntitiesWithCompletionHandler:^(id object, NSError * error) {
-                
-            }];
-        }).to.raise(@"NotImplementedException");
-    });
-    
-    it(@"should raise NotImplemented excpetion for getOne method", ^{
-        expect(^{
-            [provider getEntityForId:[NSNumber numberWithInt:1] withCompletionHandler:^(id object, NSError * error) {
-                
-            }];
-        }).to.raise(@"NotImplementedException");
     });
 });
 
