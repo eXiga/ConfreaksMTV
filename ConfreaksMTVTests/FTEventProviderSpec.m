@@ -24,8 +24,7 @@ describe(@"FTEventProvider", ^{
     });
     
     it(@"is expected to have valid resource url: https://confreaks.tv/api/v1/events", ^{
-        NSURL *baseUrl = [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:BaseApiURL]];
-        NSURL *resultUrl = [NSURL URLWithString:EventsEndpointName relativeToURL:baseUrl];
+        NSURL *resultUrl = [NSURL URLWithString:EventsEndpointName relativeToURL:[provider baseUrl]];
         expect(provider.url).to.equal(resultUrl);
     });
     

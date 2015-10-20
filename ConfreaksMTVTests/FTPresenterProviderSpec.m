@@ -23,6 +23,11 @@ describe(@"FTPresenterProvider", ^{
         expect([provider class]).to.beSubclassOf([FTBaseProvider class]);
     });
     
+    it(@"is expected to have valid resource url: https://confreaks.tv/api/v1/conferences", ^{
+        NSURL *resultUrl = [NSURL URLWithString:PresentersEndpointName relativeToURL:[provider baseUrl]];
+        expect(provider.url).to.equal(resultUrl);
+    });
+    
     describe(@"#getAllEntitiesWithCompletionHandler:", ^{
         beforeEach(^{
             [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
