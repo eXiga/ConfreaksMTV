@@ -22,11 +22,4 @@ NSString *const ConferencesEndpointName = @"conferences";
     return self;
 }
 
-- (void)getEntityForId:(id)entityId withCompletionHandler:(FTResponseHandler)handler {
-    NSString *conferenceId = [entityId isKindOfClass:[NSString class]] ? (NSString *)entityId : [entityId stringValue];
-    NSURL *conferenceUrl = [self.url URLByAppendingPathComponent:conferenceId];
-    NSURLRequest *request = [NSURLRequest requestWithURL:conferenceUrl];
-    [FTResourceDownloader getRequest:request withHandler:handler];
-}
-
 @end

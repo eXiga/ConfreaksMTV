@@ -39,13 +39,6 @@ NSString *const VideoFeaturedResourceName = @"featured-video";
     [FTResourceDownloader getRequest:request withHandler:handler];
 }
 
-- (void)getEntityForId:(id)entityId withCompletionHandler:(FTResponseHandler)handler {
-    NSString *videoId = [entityId isKindOfClass:[NSString class]] ? (NSString *)entityId : [entityId stringValue];
-    NSURL *videoUrl = [self.url URLByAppendingPathComponent:videoId];
-    NSURLRequest *request = [NSURLRequest requestWithURL:videoUrl];
-    [FTResourceDownloader getRequest:request withHandler:handler];
-}
-
 - (void)getVideoCountWithCompletionHandler:(FTResponseHandler)handler {
     NSURL *videoCountUrl = [[self baseUrl] URLByAppendingPathComponent:VideosCountResourceName];
     NSURLRequest *request = [NSURLRequest requestWithURL:videoCountUrl];

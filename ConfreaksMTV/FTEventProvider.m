@@ -25,13 +25,6 @@ NSString *const EventsVideosResourceName = @"videos";
     return self;
 }
 
-- (void)getEntityForId:(id)entityId withCompletionHandler:(FTResponseHandler)handler {
-    NSString *eventId = [entityId isKindOfClass:[NSString class]] ? (NSString *)entityId : [entityId stringValue];
-    NSURL *eventUrl = [self.url URLByAppendingPathComponent:eventId];
-    NSURLRequest *request = [NSURLRequest requestWithURL:eventUrl];
-    [FTResourceDownloader getRequest:request withHandler:handler];
-}
-
 - (void)getEventCountWithCompletionHandler:(FTResponseHandler)handler {
     NSURL *eventCountUrl = [[self baseUrl] URLByAppendingPathComponent:EventsCountResourceName];
     NSURLRequest *request = [NSURLRequest requestWithURL:eventCountUrl];
