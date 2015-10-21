@@ -1,0 +1,13 @@
+{
+    "id":42,
+    "short_code":"g5thrive",
+    "start_at":"2011-07-15T07:00:00.000Z",
+    "end_at":"2011-07-15T07:00:00.000Z",
+    "video_count":1,
+    "logo":"http://s3-us-west-2.amazonaws.com/confreaks-tv3/production/events/logos/000/000/042/g5-original-original.png?1422307138",
+    "conference":
+        {
+            "id":24,
+            "name":"G5"
+        }
+}

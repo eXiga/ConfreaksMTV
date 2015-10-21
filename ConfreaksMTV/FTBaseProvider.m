@@ -7,6 +7,7 @@
 //
 
 #import "FTBaseProvider.h"
+#import "FTResourceDownloader.h"
 
 NSString *const BaseApiURL = @"FTBaseApiURL";
 
@@ -15,19 +16,26 @@ NSString *const BaseApiURL = @"FTBaseApiURL";
 - (instancetype)initWithEndpointName:(NSString *)endpoint {
     self = [super init];
     if (self) {
-        NSURL *baseUrl = [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:BaseApiURL]];
-        _url = [NSURL URLWithString:endpoint relativeToURL:baseUrl];
+        _url = [NSURL URLWithString:endpoint relativeToURL:[self baseUrl]];
     }
 
     return self;
 }
 
+- (NSURL *)baseUrl {
+    return  [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:BaseApiURL]];
+}
+
 - (void)getAllEntitiesWithCompletionHandler:(FTResponseHandler)handler {
-    [NSException raise:@"NotImplementedException" format:@"Method should be overrided in subclass"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
+    [FTResourceDownloader getRequest:request withHandler:handler];
 }
 
 - (void)getEntityForId:(id)entityId withCompletionHandler:(FTResponseHandler)handler {
-    [NSException raise:@"NotImplementedException" format:@"Method should be overrided in subclass"];
+    NSString *castedEntityId = [entityId isKindOfClass:[NSString class]] ? (NSString *)entityId : [entityId stringValue];
+    NSURL *resourceUrl = [self.url URLByAppendingPathComponent:castedEntityId];
+    NSURLRequest *request = [NSURLRequest requestWithURL:resourceUrl];
+    [FTResourceDownloader getRequest:request withHandler:handler];
 }
 
 @end

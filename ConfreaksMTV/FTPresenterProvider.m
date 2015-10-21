@@ -7,7 +7,29 @@
 //
 
 #import "FTPresenterProvider.h"
+#import "FTResourceDownloader.h"
+
+NSString *const PresentersEndpointName = @"presenters";
+NSString *const PresentersVideosResourceName = @"videos";
 
 @implementation FTPresenterProvider
+
+- (instancetype)init {
+    self = [super initWithEndpointName:PresentersEndpointName];
+    
+    if (self) {
+        
+    }
+    
+    return self;
+}
+
+- (void)getVideosForPresenter:(id)entityId withCompletionHandler:(FTResponseHandler)handler {
+    NSString *presenterId = [entityId isKindOfClass:[NSString class]] ? (NSString *)entityId : [entityId stringValue];
+    NSURL *presenterUrl = [self.url URLByAppendingPathComponent:presenterId];
+    NSURL *videosUrl = [presenterUrl URLByAppendingPathComponent:PresentersVideosResourceName];
+    NSURLRequest *request = [NSURLRequest requestWithURL:videosUrl];
+    [FTResourceDownloader getRequest:request withHandler:handler];
+}
 
 @end
