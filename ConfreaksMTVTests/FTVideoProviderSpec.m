@@ -48,6 +48,10 @@ describe(@"FTVideoProvider", ^{
                     }];
                 });
             });
+            
+            afterEach(^{
+                [OHHTTPStubs removeAllStubs];
+            });
         });
         
         context(@"with limit", ^{
@@ -69,6 +73,10 @@ describe(@"FTVideoProvider", ^{
                         done();
                     }];
                 });
+            });
+            
+            afterEach(^{
+                [OHHTTPStubs removeAllStubs];
             });
         });
         
@@ -92,10 +100,10 @@ describe(@"FTVideoProvider", ^{
                     }];
                 });
             });
-        });
-        
-        afterEach(^{
-            [OHHTTPStubs removeAllStubs];
+            
+            afterEach(^{
+                [OHHTTPStubs removeAllStubs];
+            });
         });
     });
     

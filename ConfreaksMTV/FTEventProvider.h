@@ -17,5 +17,7 @@ FOUNDATION_EXPORT NSString *const EventsVideosResourceName;
 
 - (void)getEventCountWithCompletionHandler:(FTResponseHandler)handler;
 - (void)getVideosForEvent:(id)entityId withCompletionHandler:(FTResponseHandler)handler;
+- (void)getAllEntitiesUsingLimit:(NSNumber *)limit orderedByDescending:(BOOL)ordered withCompletionHandler:(FTResponseHandler)handler;
+
 
 @end

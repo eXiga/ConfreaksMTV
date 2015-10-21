@@ -29,27 +29,81 @@ describe(@"FTEventProvider", ^{
     });
     
     describe(@"#getAllEntitiesWithCompletionHandler:", ^{
-        beforeEach(^{
-            [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
-                return [request.URL.lastPathComponent isEqualToString:@"events"];
-            } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
-                return [OHHTTPStubsResponse responseWithFileAtPath:FIXTURE(events)
-                                                        statusCode:SUCCESS_STATUS_CODE
-                                                           headers:DEFAULT_HEADERS];
-            }];
-        });
-        
-        it(@"is expected to get all event from service", ^{
-            waitUntil(^(DoneCallback done) {
-                [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
-                    expect(object).to.haveACountOf(5);
-                    done();
+        context(@"without parameters", ^{
+            beforeEach(^{
+                [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+                    return [request.URL.lastPathComponent isEqualToString:@"events"];
+                } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+                    return [OHHTTPStubsResponse responseWithFileAtPath:FIXTURE(events)
+                                                            statusCode:SUCCESS_STATUS_CODE
+                                                               headers:DEFAULT_HEADERS];
                 }];
+            });
+            
+            it(@"is expected to get all event from service", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.haveACountOf(5);
+                        done();
+                    }];
+                });
+            });
+            
+            afterEach(^{
+                [OHHTTPStubs removeAllStubs];
             });
         });
         
-        afterEach(^{
-            [OHHTTPStubs removeAllStubs];
+        context(@"with limit", ^{
+            beforeEach(^{
+                [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+                    return [request.URL.lastPathComponent isEqualToString:@"events"] &&
+                    request.URL.query != nil;
+                } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+                    return [OHHTTPStubsResponse responseWithFileAtPath:FIXTURE(events_limited)
+                                                            statusCode:SUCCESS_STATUS_CODE
+                                                               headers:DEFAULT_HEADERS];
+                }];
+            });
+            
+            it(@"is expected to get limited events from service", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getAllEntitiesUsingLimit:@6 orderedByDescending:NO withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.haveACountOf(6);
+                        done();
+                    }];
+                });
+            });
+            
+            afterEach(^{
+                [OHHTTPStubs removeAllStubs];
+            });
+        });
+        
+        context(@"with ordering by descending", ^{
+            beforeEach(^{
+                [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+                    return [request.URL.lastPathComponent isEqualToString:@"events"] &&
+                    request.URL.query != nil;
+                } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+                    return [OHHTTPStubsResponse responseWithFileAtPath:FIXTURE(events_sorted)
+                                                            statusCode:SUCCESS_STATUS_CODE
+                                                               headers:DEFAULT_HEADERS];
+                }];
+            });
+            
+            it(@"is expected to get sorted events from service", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getAllEntitiesUsingLimit:@5 orderedByDescending:YES withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.haveACountOf(5);
+                        done();
+                    }];
+                });
+            });
+            
+            afterEach(^{
+                [OHHTTPStubs removeAllStubs];
+            });
         });
     });
     

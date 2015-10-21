@@ -39,4 +39,16 @@ NSString *const EventsVideosResourceName = @"videos";
     [FTResourceDownloader getRequest:request withHandler:handler];
 }
 
+- (void)getAllEntitiesUsingLimit:(NSNumber *)limit orderedByDescending:(BOOL)ordered withCompletionHandler:(FTResponseHandler)handler {
+    NSString *queryString = [NSString stringWithFormat:@"limit=%li", (long)[limit integerValue]];
+    
+    if (ordered) {
+        queryString = [NSString stringWithFormat:@"%@&sort=recent", queryString];
+    }
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?%@", [self.url absoluteString], queryString]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [FTResourceDownloader getRequest:request withHandler:handler];
+}
+
 @end
