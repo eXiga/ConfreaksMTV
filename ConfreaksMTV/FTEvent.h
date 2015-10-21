@@ -19,9 +19,9 @@
 @property (strong, nonatomic) NSDate *endAt;
 @property (strong, nonatomic) NSNumber *videoCount;
 @property (strong, nonatomic) NSString *logo;
-@property (weak, nonatomic) FTConference *conference;
+@property (strong, nonatomic) NSNumber *confId;
+@property (strong, nonatomic) NSString *confName;
 
-- (instancetype)initWithEventId:(NSNumber *)eventId eventDisplayName:(NSString *)eventDisplayName eventShortCode:(NSString *)eventShortCode eventStartAt:(NSDate *)eventStartAt eventEndAt:(NSDate *)eventEndAt eventConference:(FTConference *)eventConference;
-- (instancetype)initWithEventId:(NSNumber *)eventId eventShortCode:(NSString *)eventShortCode eventStartAt:(NSDate *)eventStartAt eventEndAt:(NSDate *)eventEndAt eventVideoCount:(NSNumber *)eventVideoCount eventLogo:(NSString *)eventLogo eventConference:(FTConference *)eventConference;
+- (instancetype)initWithParams:(NSDictionary *)params;
 
 @end

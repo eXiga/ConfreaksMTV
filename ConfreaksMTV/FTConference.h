@@ -7,16 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FTEvent.h"
 
 @interface FTConference : NSObject
 
 @property (strong, nonatomic) NSNumber *conferenceId;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSNumber *eventCount;
-@property (strong, nonatomic) NSMutableArray *events;
+@property (strong, nonatomic) NSMutableArray *eventsId;
 
-- (instancetype)initWithConfName:(NSString *)confName confId:(NSNumber *)confId confEventCount:(NSNumber *)confEventCount;
-- (void)addEventObject:(FTEvent *)event;
+- (instancetype)initWithParams:(NSDictionary *)params;
 
 @end

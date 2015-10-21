@@ -10,23 +10,25 @@
 
 @implementation FTConference
 
-- (instancetype)initWithConfName:(NSString *)confName confId:(NSNumber *)confId confEventCount:(NSNumber *)confEventCount {
+- (instancetype)initWithParams:(NSDictionary *)params {
     self = [super init];
     
     if (self) {
-        _name = confName;
-        _conferenceId = confId;
-        _eventCount = confEventCount;
+        _conferenceId = params[@"id"];
+        _name = params[@"name"];
+        _eventCount = params[@"event_count"];
+        
+        if (params[@"events"] != nil) {
+            NSArray *events = params[@"events"];
+            _eventsId = [NSMutableArray new];
+            
+            for (NSDictionary *event in events) {
+                [_eventsId addObject:event[@"id"]];
+            }
+        }
     }
     
     return self;
-}
-
-- (void)addEventObject:(FTEvent *)event {
-    if (!self.events) {
-        self.events = [NSMutableArray new];
-    }
-    [self.events addObject:event];
 }
 
 @end

@@ -10,32 +10,27 @@
 
 @implementation FTEvent
 
-- (instancetype)initWithEventId:(NSNumber *)eventId eventDisplayName:(NSString *)eventDisplayName eventShortCode:(NSString *)eventShortCode eventStartAt:(NSDate *)eventStartAt eventEndAt:(NSDate *)eventEndAt eventConference:(FTConference *)eventConference {
+- (instancetype)initWithParams:(NSDictionary *)params {
     self = [super init];
     
     if (self) {
-        _eventId = eventId;
-        _displayName = eventDisplayName;
-        _shortCode = eventShortCode;
-        _startAt = eventStartAt;
-        _endAt = eventEndAt;
-        _conference = eventConference;
-    }
-    
-    return self;
-}
-
-- (instancetype) initWithEventId:(NSNumber *)eventId eventShortCode:(NSString *)eventShortCode eventStartAt:(NSDate *)eventStartAt eventEndAt:(NSDate *)eventEndAt eventVideoCount:(NSNumber *)eventVideoCount eventLogo:(NSString *)eventLogo eventConference:(FTConference *)eventConference {
-    self = [super init];
-    
-    if (self) {
-        _eventId = eventId;
-        _shortCode = eventShortCode;
-        _startAt = eventStartAt;
-        _endAt = eventEndAt;
-        _videoCount = eventVideoCount;
-        _logo = eventLogo;
-        _conference = eventConference;
+        NSDateFormatter *dateFormatter = [NSDateFormatter new];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
+        
+        _eventId = params[@"id"];
+        _displayName = params[@"display_name"];
+        _shortCode = params[@"short_code"];
+        _videoCount = params[@"video_count"];
+        _logo = params[@"logo"];
+        _startAt = [dateFormatter dateFromString:params[@"start_at"]];
+        _endAt = [dateFormatter dateFromString:params[@"end_at"]];
+        
+        if ([params[@"conference"] isKindOfClass:[NSDictionary class]]) {
+            _confId = [params valueForKeyPath:@"conference.id"];
+            _confName = [params valueForKeyPath:@"conference.name"];
+        } else {
+            _confName = params[@"conference"];
+        }
     }
     
     return self;
