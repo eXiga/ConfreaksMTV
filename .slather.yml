@@ -1,3 +1,5 @@
 coverage_service: coveralls
 xcodeproj: ConfreaksMTV.xcodeproj
-source_directory: ConfreaksMTV/
+ignore:
+  - ConfreaksMTVTests/.*
+  - ConfreaksMTVUITests/.*
