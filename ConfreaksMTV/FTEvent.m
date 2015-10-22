@@ -26,10 +26,10 @@
         _endAt = [dateFormatter dateFromString:params[@"end_at"]];
         
         if ([params[@"conference"] isKindOfClass:[NSDictionary class]]) {
-            _confId = [params valueForKeyPath:@"conference.id"];
-            _confName = [params valueForKeyPath:@"conference.name"];
+            _conferenceId = [params valueForKeyPath:@"conference.id"];
+            _conferenceName = [params valueForKeyPath:@"conference.name"];
         } else {
-            _confName = params[@"conference"];
+            _conferenceName = params[@"conference"];
         }
     }
     

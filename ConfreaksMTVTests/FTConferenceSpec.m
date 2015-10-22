@@ -16,7 +16,7 @@ describe(@"FTConference", ^{
     __block NSDictionary *allConfJsonFormat;
     __block NSDictionary *oneConfJsonFormat;
     
-    beforeEach(^{
+    beforeAll(^{
         allConfJsonFormat = @{@"name" : @"Airbnb Tech Talks", @"id" : @58, @"event_count" : @2};
         
         NSArray *events = @[

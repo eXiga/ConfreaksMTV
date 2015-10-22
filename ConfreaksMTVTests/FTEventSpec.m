@@ -16,7 +16,7 @@ describe(@"FTEvent", ^{
     __block NSDictionary *allEventsJsonFormat;
     __block NSDictionary *oneEventJsonFormat;
     
-    beforeEach(^{
+    beforeAll(^{
         allEventsJsonFormat = @{@"id" : @293, @"display_name" : @"Ruby Conference 2015", @"conference" : @"Ruby Conference", @"short_code" : @"rubyconf2015", @"start_at" : @"2015-11-15T00:00:00.000Z", @"end_at" : @"2015-11-17T00:00:00.000Z"};
         oneEventJsonFormat = @{@"id" : @293, @"short_code" : @"rubyconf2015", @"start_at" : @"2015-11-15T00:00:00.000Z", @"end_at" : @"2015-11-17T00:00:00.000Z", @"video_count" : @0, @"logo" : @"http://s3-us-west-2.amazonaws.com/confreaks-tv3/production/events/logos/000/000/293/rc-main-logo-2-original.png?1445375694", @"conference" : @{ @"id" : @3, @"name" : @"Ruby Conference"}};
     });
@@ -54,16 +54,16 @@ describe(@"FTEvent", ^{
         });
         
         it(@"is expected to return correct conference name", ^{
-            expect(event.confName).to.equal(@"Ruby Conference");
+            expect(event.conferenceName).to.equal(@"Ruby Conference");
         });
         
         it(@"is expected to change conference name correctly", ^{
-            event.confName = @"Test Conference";
-            expect(event.confName).to.equal(@"Test Conference");
+            event.conferenceName = @"Test Conference";
+            expect(event.conferenceName).to.equal(@"Test Conference");
         });
         
         it(@"is expected for conference id to be nil", ^{
-            expect(event.confId).to.beNil();
+            expect(event.conferenceId).to.beNil();
         });
         
         it(@"is expected for logo to be nil", ^{
@@ -119,28 +119,28 @@ describe(@"FTEvent", ^{
         });
         
         it(@"is expected to return correct conference name", ^{
-            expect(event.confName).to.equal(@"Ruby Conference");
+            expect(event.conferenceName).to.equal(@"Ruby Conference");
         });
         
         it(@"is expected to change conference name correctly", ^{
-            event.confName = @"Test Conference";
-            expect(event.confName).to.equal(@"Test Conference");
+            event.conferenceName = @"Test Conference";
+            expect(event.conferenceName).to.equal(@"Test Conference");
         });
         
         it(@"is expected to return correct conference id", ^{
-            expect(event.confId).to.equal(@3);
+            expect(event.conferenceId).to.equal(@3);
         });
         
         it(@"is expected to change conference id correctly", ^{
-            event.confId = @7;
-            expect(event.confId).to.equal(@7);
+            event.conferenceId = @7;
+            expect(event.conferenceId).to.equal(@7);
         });
         
         it(@"is expected return correct logo address", ^{
             expect(event.logo).to.equal(@"http://s3-us-west-2.amazonaws.com/confreaks-tv3/production/events/logos/000/000/293/rc-main-logo-2-original.png?1445375694");
         });
         
-        it(@"is expected to chenge logo address correctly", ^{
+        it(@"is expected to change logo address correctly", ^{
             event.logo = @"test://logo";
             expect(event.logo).to.equal(@"test://logo");
         });
