@@ -7,6 +7,7 @@
 //
 
 #import "FTVideo.h"
+#import "FTSlugFormatter.h"
 
 @implementation FTVideo
 
@@ -43,13 +44,14 @@
                 if (presenter[@"aka_name"] != nil) {
                     [_presentersSlug addObject:presenter[@"aka_name"]];
                 } else {
-                    NSMutableString *newSlug = presenter[@"first_name"];
-                    [newSlug appendString:@"-"];
+                    FTSlugFormatter *slugFormatter = [[FTSlugFormatter alloc] initWithSymbolsToReplace:@[@" ", @"."] withSymbol:@"-"];
+                    NSMutableString *newSlug = [[NSMutableString alloc] initWithString:presenter[@"first_name"]];
+                    if ([newSlug characterAtIndex:MAX([newSlug length] - 1, 0)] != '.') {
+                        [newSlug appendString:@" "];
+                    }
                     [newSlug appendString:presenter[@"last_name"]];
-                    [newSlug replaceOccurrencesOfString:@" " withString:@"-" options:NSLiteralSearch range:NSMakeRange(0, [newSlug length])];
-                    [newSlug replaceOccurrencesOfString:@"." withString:@"-" options:NSLiteralSearch range:NSMakeRange(0, [newSlug length])];
                     
-                    [_presentersSlug addObject:newSlug];
+                    [_presentersSlug addObject:[slugFormatter stringForObjectValue:newSlug]];
                 }
             }
         }
