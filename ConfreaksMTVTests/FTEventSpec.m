@@ -15,10 +15,14 @@ describe(@"FTEvent", ^{
     __block FTEvent *event;
     __block NSDictionary *allEventsJsonFormat;
     __block NSDictionary *oneEventJsonFormat;
+    __block NSDateFormatter *dateFormatter;
     
     beforeAll(^{
         allEventsJsonFormat = @{@"id" : @293, @"display_name" : @"Ruby Conference 2015", @"conference" : @"Ruby Conference", @"short_code" : @"rubyconf2015", @"start_at" : @"2015-11-15T00:00:00.000Z", @"end_at" : @"2015-11-17T00:00:00.000Z"};
         oneEventJsonFormat = @{@"id" : @293, @"short_code" : @"rubyconf2015", @"start_at" : @"2015-11-15T00:00:00.000Z", @"end_at" : @"2015-11-17T00:00:00.000Z", @"video_count" : @0, @"logo" : @"http://s3-us-west-2.amazonaws.com/confreaks-tv3/production/events/logos/000/000/293/rc-main-logo-2-original.png?1445375694", @"conference" : @{ @"id" : @3, @"name" : @"Ruby Conference"}};
+        
+        dateFormatter = [NSDateFormatter new];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
     });
     
     context(@"when all events format was received", ^{
@@ -75,18 +79,12 @@ describe(@"FTEvent", ^{
         });
         
         it(@"is expected to return correct start date/time", ^{
-            NSDateFormatter *dateFormatter = [NSDateFormatter new];
-            [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
             NSDate *dateToCompareWith = [dateFormatter dateFromString:@"2015-11-15T00:00:00.000Z"];
-            
             expect(event.startAt).to.equal(dateToCompareWith);
         });
         
         it(@"is expected to return correct end date/time", ^{
-            NSDateFormatter *dateFormatter = [NSDateFormatter new];
-            [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
             NSDate *dateToCompareWith = [dateFormatter dateFromString:@"2015-11-17T00:00:00.000Z"];
-            
             expect(event.endAt).to.equal(dateToCompareWith);
         });
     });
@@ -155,18 +153,12 @@ describe(@"FTEvent", ^{
         });
         
         it(@"is expected to return correct start date/time", ^{
-            NSDateFormatter *dateFormatter = [NSDateFormatter new];
-            [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
             NSDate *dateToCompareWith = [dateFormatter dateFromString:@"2015-11-15T00:00:00.000Z"];
-            
             expect(event.startAt).to.equal(dateToCompareWith);
         });
         
         it(@"is expected to return correct end date/time", ^{
-            NSDateFormatter *dateFormatter = [NSDateFormatter new];
-            [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
             NSDate *dateToCompareWith = [dateFormatter dateFromString:@"2015-11-17T00:00:00.000Z"];
-            
             expect(event.endAt).to.equal(dateToCompareWith);
         });
     });

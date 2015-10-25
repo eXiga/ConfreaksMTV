@@ -29,8 +29,6 @@ describe(@"FTSlugFormatter", ^{
     it(@"is expected to correctly replace symbols in string if input parameter is NSMutableString", ^{
         outputString = [slugFormatter stringForObjectValue:inputString1];
         expect(outputString).to.equal(@"Ronald-M-C-Donald");
-        outputString = [slugFormatter stringForObjectValue:@"Dima Kostenich"];
-        expect(outputString).to.equal(@"Dima-Kostenich");
     });
 
     it(@"is expected to correctly replace symbols in string if input parameter is NSString", ^{

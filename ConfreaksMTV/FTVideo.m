@@ -22,12 +22,23 @@
         _slug = params[@"slug"];
         _title = params[@"title"];
         _image = params[@"image"];
-        _recordedAt = [dateFormatter dateFromString:params[@"recorded_at"]];
+        
+        if ([params[@"recorded_at"] class] != [NSNull class]) {
+            _recordedAt = [dateFormatter dateFromString:params[@"recorded_at"]];
+        }
+        
         _event = params[@"event"];
         _rating = params[@"rating"];
         _abstract = params[@"abstract"];
-        _postDate = [dateFormatter dateFromString:params[@"post_date"]];
-        _announceDate = [dateFormatter dateFromString:params[@"announce_date"]];
+        
+        if ([params[@"post_date"] class] != [NSNull class]) {
+            _postDate = [dateFormatter dateFromString:params[@"post_date"]];
+        }
+        
+        if ([params[@"announce_date"] class] != [NSNull class]) {
+            _announceDate = [dateFormatter dateFromString:params[@"announce_date"]];
+        }
+        
         _host = params[@"host"];
         _embedCode = params[@"embed_code"];
         _views = params[@"views"];
@@ -41,7 +52,7 @@
             _presentersSlug = [NSMutableArray new];
             
             for (NSDictionary *presenter in presenters) {
-                if (presenter[@"aka_name"] != nil) {
+                if ([presenter[@"aka_name"] class] != [NSNull class] && [presenter[@"aka_name"] length] != 0) {
                     [_presentersSlug addObject:presenter[@"aka_name"]];
                 } else {
                     FTSlugFormatter *slugFormatter = [[FTSlugFormatter alloc] initWithSymbolsToReplace:@[@" ", @"."] withSymbol:@"-"];

@@ -22,8 +22,14 @@
         _shortCode = params[@"short_code"];
         _videoCount = params[@"video_count"];
         _logo = params[@"logo"];
-        _startAt = [dateFormatter dateFromString:params[@"start_at"]];
-        _endAt = [dateFormatter dateFromString:params[@"end_at"]];
+        
+        if ([params[@"start_at"] class] != [NSNull class]) {
+            _startAt = [dateFormatter dateFromString:params[@"start_at"]];
+        }
+        
+        if ([params[@"end_at"] class] != [NSNull class]) {
+            _endAt = [dateFormatter dateFromString:params[@"end_at"]];
+        }
         
         if ([params[@"conference"] isKindOfClass:[NSDictionary class]]) {
             _conferenceId = [params valueForKeyPath:@"conference.id"];
