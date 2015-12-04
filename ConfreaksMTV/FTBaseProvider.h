@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataProvider.h"
+#import "FTDataProvider.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 FOUNDATION_EXPORT NSString *const BaseApiURL;
 
-@interface FTBaseProvider : NSObject<DataProvider>
+@interface FTBaseProvider : NSObject<FTDataProvider>
 
 @property (nonatomic, strong) NSURL *url;
 

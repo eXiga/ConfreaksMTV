@@ -6,7 +6,7 @@
 //  Copyright © 2015 Anton Kostenich. All rights reserved.
 //
 
-#import "DataProvider.h"
+#import "FTDataProvider.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

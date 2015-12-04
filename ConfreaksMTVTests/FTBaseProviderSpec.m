@@ -19,8 +19,8 @@ describe(@"FTBaseProvider", ^{
         provider = [[FTBaseProvider alloc] initWithEndpointName:@"endpoint"];
     });
     
-    it(@"is expected to conform to DataProvider protocol", ^{
-        expect([provider conformsToProtocol:@protocol(DataProvider)]).to.beTruthy();
+    it(@"is expected to conform to FTDataProvider protocol", ^{
+        expect([provider conformsToProtocol:@protocol(FTDataProvider)]).to.beTruthy();
     });
     
     it(@"is expected to have valid resource url", ^{

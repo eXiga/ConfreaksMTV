@@ -1,5 +1,5 @@
 //
-//  DataProvider.h
+//  FTDataProvider.h
 //  ConfreaksMTV
 //
 //  Created by Anton Kostenich on 29.09.15.
@@ -12,7 +12,7 @@ typedef void(^FTResponseHandler)(_Nullable id object,  NSError * _Nullable  erro
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol DataProvider <NSObject>
+@protocol FTDataProvider <NSObject>
 
 - (void)getAllEntitiesWithCompletionHandler:(FTResponseHandler)handler;
 - (void)getEntityForId:(id)entityId withCompletionHandler:(FTResponseHandler)handler;
