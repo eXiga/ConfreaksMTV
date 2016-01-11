@@ -26,10 +26,20 @@ describe(@"FTResourceDownloader", ^{
         }];
     });
     
+    it(@"should return an array", ^{
+        waitUntil(^(DoneCallback done) {
+            [FTResourceDownloader getRequest:request withHandler:^(id object, NSError * error) {
+                expect(object).to.beAKindOf([NSArray class]);
+                done();
+            }];
+        });
+    });
+    
     it(@"should make valid get request", ^{
         waitUntil(^(DoneCallback done) {
             [FTResourceDownloader getRequest:request withHandler:^(id object, NSError * error) {
-                expect(object[@"ping"]).to.equal(@"pong");
+                NSDictionary *dict = object[0];
+                expect(dict[@"ping"]).to.equal(@"pong");
                 done();
             }];
         });

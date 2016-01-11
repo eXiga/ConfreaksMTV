@@ -37,6 +37,15 @@ describe(@"FTConferenceProvider", ^{
                                                         statusCode:SUCCESS_STATUS_CODE
                                                            headers:DEFAULT_HEADERS];
             }];
+        });        
+        
+        it(@"is expected to return an array", ^{
+            waitUntil(^(DoneCallback done) {
+                [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
+                    expect(object).to.beAKindOf([NSArray class]);
+                    done();
+                }];
+            });
         });
         
         it(@"is expected to get all conferences from service", ^{
@@ -65,10 +74,19 @@ describe(@"FTConferenceProvider", ^{
                 }];
             });
             
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getEntityForId:@"aloha-ruby" withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+            
             it(@"is expected to get one conference from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@"aloha-ruby" withCompletionHandler:^(id object, NSError *error) {
-                        expect(object).toNot.beNil();
+                        expect(object).to.haveACountOf(1);
                         done();
                     }];
                 });
@@ -90,10 +108,19 @@ describe(@"FTConferenceProvider", ^{
                 }];
             });
             
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getEntityForId:@38 withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+            
             it(@"is expected to get one conference from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@38 withCompletionHandler:^(id object, NSError *error) {
-                        expect(object).toNot.beNil();
+                        expect(object).to.haveACountOf(1);
                         done();
                     }];
                 });

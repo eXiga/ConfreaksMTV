@@ -40,6 +40,15 @@ describe(@"FTEventProvider", ^{
                 }];
             });
             
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+            
             it(@"is expected to get all event from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
@@ -64,6 +73,15 @@ describe(@"FTEventProvider", ^{
                                                             statusCode:SUCCESS_STATUS_CODE
                                                                headers:DEFAULT_HEADERS];
                 }];
+            });
+            
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getAllEntitiesUsingLimit:@6 orderedByDescending:NO withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
             });
             
             it(@"is expected to get limited events from service", ^{
@@ -92,6 +110,15 @@ describe(@"FTEventProvider", ^{
                 }];
             });
             
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getAllEntitiesUsingLimit:@5 orderedByDescending:YES withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+
             it(@"is expected to get sorted events from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getAllEntitiesUsingLimit:@5 orderedByDescending:YES withCompletionHandler:^(id object, NSError *error) {
@@ -119,10 +146,19 @@ describe(@"FTEventProvider", ^{
                 }];
             });
             
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getEntityForId:@"g5thrive" withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+            
             it(@"is expected to get one event from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@"g5thrive" withCompletionHandler:^(id object, NSError *error) {
-                        expect(object).toNot.beNil();
+                        expect(object).to.haveACountOf(1);
                         done();
                     }];
                 });
@@ -144,10 +180,19 @@ describe(@"FTEventProvider", ^{
                 }];
             });
             
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getEntityForId:@42 withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+            
             it(@"is expected to get one event from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@42 withCompletionHandler:^(id object, NSError *error) {
-                        expect(object).toNot.beNil();
+                        expect(object).to.haveACountOf(1);
                         done();
                     }];
                 });
@@ -171,6 +216,15 @@ describe(@"FTEventProvider", ^{
         });
         
         context(@"when working with id", ^{
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getVideosForEvent:@42 withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+
             it(@"is expected to get all event's videos", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getVideosForEvent:@42 withCompletionHandler:^(id object, NSError *error) {
@@ -182,6 +236,15 @@ describe(@"FTEventProvider", ^{
         });
         
         context(@"when working with shortcode", ^{
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getVideosForEvent:@"g5thrive" withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+
             it(@"is expected to get all event's videos", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getVideosForEvent:@"g5thrive" withCompletionHandler:^(id object, NSError *error) {
@@ -208,10 +271,19 @@ describe(@"FTEventProvider", ^{
             }];
         });
         
+        it(@"is expected to return an array", ^{
+            waitUntil(^(DoneCallback done) {
+                [provider getEventCountWithCompletionHandler:^(id object, NSError *error) {
+                    expect(object).to.beAKindOf([NSArray class]);
+                    done();
+                }];
+            });
+        });
+        
         it(@"is expected to get events count from service", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getEventCountWithCompletionHandler:^(id object, NSError *error) {
-                    expect(object).toNot.beNil();
+                    expect(object).to.haveACountOf(1);
                     done();
                 }];
             });
