@@ -3,8 +3,8 @@ require 'rake'
 WORKSPACE_NAME = 'ConfreaksMTV.xcworkspace'
 SCHEME_NAME = "ConfreaksMTV"
 
-IPAD_AIR2_OS_9 = 'platform=iOS Simulator,name=iPad 2,OS=9.0'
-IPHONE_6_OS_9 = 'platform=iOS Simulator,name=iPhone 6,OS=9.0'
+IPAD_AIR2_OS_9 = 'platform=iOS Simulator,name=iPad 2,OS=9.2'
+IPHONE_6_OS_9 = 'platform=iOS Simulator,name=iPhone 6,OS=9.2'
 
 def execute(command)
   system(command) or raise "** BUILD FAILED **"
