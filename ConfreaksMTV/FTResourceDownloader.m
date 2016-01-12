@@ -23,8 +23,7 @@
         // However, if you request only one item (e.g. particular conference), single
         // dictionary will be returned. That's why we need some logic to convert it into array.
         if (json != nil && [json isKindOfClass:[NSDictionary class]]) {
-            NSMutableArray *jsonArray = [NSMutableArray array];
-            [jsonArray addObject:json];
+            NSArray *jsonArray = [NSArray arrayWithObject:json];
             handler(jsonArray, error);
         } else {
             handler(json, error);
