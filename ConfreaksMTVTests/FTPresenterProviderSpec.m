@@ -39,6 +39,15 @@ describe(@"FTPresenterProvider", ^{
             }];
         });
         
+        it(@"is expected to return an array", ^{
+            waitUntil(^(DoneCallback done) {
+                [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
+                    expect(object).to.beAKindOf([NSArray class]);
+                    done();
+                }];
+            });
+        });
+        
         it(@"is expected to get all presenters from service", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
@@ -65,10 +74,19 @@ describe(@"FTPresenterProvider", ^{
                 }];
             });
             
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getEntityForId:@"aaron-bedra" withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+            
             it(@"is expected to get one presenter from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@"aaron-bedra" withCompletionHandler:^(id object, NSError *error) {
-                        expect(object).toNot.beNil();
+                        expect(object).to.haveACountOf(1);
                         done();
                     }];
                 });
@@ -90,10 +108,19 @@ describe(@"FTPresenterProvider", ^{
                 }];
             });
             
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getEntityForId:@22 withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+            
             it(@"is expected to get one presenter from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@22 withCompletionHandler:^(id object, NSError *error) {
-                        expect(object).toNot.beNil();
+                        expect(object).to.haveACountOf(1);
                         done();
                     }];
                 });
@@ -118,6 +145,15 @@ describe(@"FTPresenterProvider", ^{
         });
         
         context(@"when working with id", ^{
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getVideosForPresenter:@22 withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+            
             it(@"is expected to get all presenter's videos", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getVideosForPresenter:@22 withCompletionHandler:^(id object, NSError *error) {
@@ -129,6 +165,15 @@ describe(@"FTPresenterProvider", ^{
         });
         
         context(@"when working with name", ^{
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getVideosForPresenter:@"aaron-bedra" withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+            
             it(@"is expected to get all presenter's videos", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getVideosForPresenter:@"aaron-bedra" withCompletionHandler:^(id object, NSError *error) {

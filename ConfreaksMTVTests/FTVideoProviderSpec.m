@@ -40,6 +40,15 @@ describe(@"FTVideoProvider", ^{
                 }];
             });
             
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+            
             it(@"is expected to get all videos from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
@@ -64,6 +73,15 @@ describe(@"FTVideoProvider", ^{
                                                             statusCode:SUCCESS_STATUS_CODE
                                                                headers:DEFAULT_HEADERS];
                 }];
+            });
+            
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getAllEntitiesUsingLimit:@5 orderedByDescending:NO withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
             });
             
             it(@"is expected to get limited videos from service", ^{
@@ -92,6 +110,15 @@ describe(@"FTVideoProvider", ^{
                 }];
             });
             
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getAllEntitiesUsingLimit:@4 orderedByDescending:YES withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+            
             it(@"is expected to get sorted videos from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getAllEntitiesUsingLimit:@4 orderedByDescending:YES withCompletionHandler:^(id object, NSError *error) {
@@ -118,10 +145,19 @@ describe(@"FTVideoProvider", ^{
             }];
         });
         
+        it(@"is expected to return an array", ^{
+            waitUntil(^(DoneCallback done) {
+                [provider getVideoCountWithCompletionHandler:^(id object, NSError *error) {
+                    expect(object).to.beAKindOf([NSArray class]);
+                    done();
+                }];
+            });
+        });
+        
         it(@"is expected to get videos count from service", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getVideoCountWithCompletionHandler:^(id object, NSError *error) {
-                    expect(object).toNot.beNil();
+                    expect(object).to.haveACountOf(1);
                     done();
                 }];
             });
@@ -144,10 +180,19 @@ describe(@"FTVideoProvider", ^{
             }];
         });
         
+        it(@"is expected to return an array", ^{
+            waitUntil(^(DoneCallback done) {
+                [provider getFeaturedVideoWithCompletionHandler:^(id object, NSError *error) {
+                    expect(object).to.beAKindOf([NSArray class]);
+                    done();
+                }];
+            });
+        });
+        
         it(@"is expected to get featured video from service", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getFeaturedVideoWithCompletionHandler:^(id object, NSError *error) {
-                    expect(object).toNot.beNil();
+                    expect(object).to.haveACountOf(1);
                     done();
                 }];
             });
@@ -170,10 +215,19 @@ describe(@"FTVideoProvider", ^{
                 }];
             });
             
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getEntityForId:@"rubyconf2007-essential-incompleteness-in-program-modeling" withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+            
             it(@"is expected to get one video from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@"rubyconf2007-essential-incompleteness-in-program-modeling" withCompletionHandler:^(id object, NSError *error) {
-                        expect(object).toNot.beNil();
+                        expect(object).to.haveACountOf(1);
                         done();
                     }];
                 });
@@ -195,10 +249,19 @@ describe(@"FTVideoProvider", ^{
                 }];
             });
             
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getEntityForId:@42 withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+            
             it(@"is expected to get one video from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@42 withCompletionHandler:^(id object, NSError *error) {
-                        expect(object).toNot.beNil();
+                        expect(object).to.haveACountOf(1);
                         done();
                     }];
                 });
@@ -222,6 +285,15 @@ describe(@"FTVideoProvider", ^{
         });
         
         context(@"when working with id", ^{
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getVideosForPresenter:@23 atEvent:@9 withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+
             it(@"is expected to get all videos for presenter at event from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getVideosForPresenter:@23 atEvent:@9 withCompletionHandler:^(id object, NSError *error) {
@@ -233,6 +305,15 @@ describe(@"FTVideoProvider", ^{
         });
         
         context(@"when working with shortcode", ^{
+            it(@"is expected to return an array", ^{
+                waitUntil(^(DoneCallback done) {
+                    [provider getVideosForPresenter:@"aaron-bedra" atEvent:@"rubyconf2007" withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
+                        done();
+                    }];
+                });
+            });
+
             it(@"is expected to get all videos for presenter at event from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getVideosForPresenter:@"aaron-bedra" atEvent:@"rubyconf2007" withCompletionHandler:^(id object, NSError *error) {
