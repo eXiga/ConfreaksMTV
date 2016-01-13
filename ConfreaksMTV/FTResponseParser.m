@@ -13,10 +13,6 @@
 + (NSArray<FTConference*> *)parseConferences:(NSArray *)conferences {
     NSMutableArray<FTConference*> *array = [NSMutableArray array];
     
-    if (!array) {
-        return nil;
-    }
-    
     for (NSDictionary *obj in conferences) {
         [array addObject:[[FTConference alloc] initWithParams:obj]];
     }
@@ -26,10 +22,6 @@
 
 + (NSArray<FTEvent*> *)parseEvents:(NSArray *)events {
     NSMutableArray<FTEvent*> *array = [NSMutableArray array];
-    
-    if (!array) {
-        return nil;
-    }
     
     for (NSDictionary *obj in events) {
         [array addObject:[[FTEvent alloc] initWithParams:obj]];
@@ -41,10 +33,6 @@
 + (NSArray<FTPresenter*> *)parsePresenters:(NSArray *)presenters {
     NSMutableArray<FTPresenter*> *array = [NSMutableArray array];
     
-    if (!array) {
-        return nil;
-    }
-    
     for (NSDictionary *obj in presenters) {
         [array addObject:[[FTPresenter alloc] initWithParams:obj]];
     }
@@ -54,10 +42,6 @@
 
 + (NSArray<FTVideo*> *)parseVideos:(NSArray *)videos {
     NSMutableArray<FTVideo*> *array = [NSMutableArray array];
-    
-    if (!array) {
-        return nil;
-    }
     
     for (NSDictionary *obj in videos) {
         [array addObject:[[FTVideo alloc] initWithParams:obj]];
