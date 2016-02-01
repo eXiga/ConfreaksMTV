@@ -1,6 +1,8 @@
 ## Build generated
 build/
 DerivedData
+*.gcda
+*.gcno
 
 ## Various settings
 *.pbxuser
