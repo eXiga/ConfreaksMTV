@@ -8,6 +8,7 @@
 
 #import "FTEventProvider.h"
 #import "FTResourceDownloader.h"
+#import "FTResponseParser.h"
 
 NSString *const EventsEndpointName = @"events";
 NSString *const EventsCountResourceName = @"event_count";
@@ -25,10 +26,28 @@ NSString *const EventsVideosResourceName = @"videos";
     return self;
 }
 
+- (void)getAllEntitiesWithCompletionHandler:(FTResponseHandler)handler {
+    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
+    [FTResourceDownloader getRequest:request withHandler:^(id object, NSError *error) {
+        handler([FTResponseParser parseEvents:object], error);
+    }];
+}
+
+- (void)getEntityForId:(id)entityId withCompletionHandler:(FTResponseHandler)handler {
+    NSString *castedEntityId = [entityId isKindOfClass:[NSString class]] ? (NSString *)entityId : [entityId stringValue];
+    NSURL *resourceUrl = [self.url URLByAppendingPathComponent:castedEntityId];
+    NSURLRequest *request = [NSURLRequest requestWithURL:resourceUrl];
+    [FTResourceDownloader getRequest:request withHandler:^(id object, NSError *error) {
+        handler([FTResponseParser parseEvents:object], error);
+    }];
+}
+
 - (void)getEventCountWithCompletionHandler:(FTResponseHandler)handler {
     NSURL *eventCountUrl = [[self baseUrl] URLByAppendingPathComponent:EventsCountResourceName];
     NSURLRequest *request = [NSURLRequest requestWithURL:eventCountUrl];
-    [FTResourceDownloader getRequest:request withHandler:handler];
+    [FTResourceDownloader getRequest:request withHandler:^(id object, NSError *error) {
+        handler([FTResponseParser parseEvents:object], error);
+    }];
 }
 
 - (void)getVideosForEvent:(id)entityId withCompletionHandler:(FTResponseHandler)handler {
@@ -36,7 +55,9 @@ NSString *const EventsVideosResourceName = @"videos";
     NSURL *eventUrl = [self.url URLByAppendingPathComponent:eventId];
     NSURL *videosUrl = [eventUrl URLByAppendingPathComponent:EventsVideosResourceName];
     NSURLRequest *request = [NSURLRequest requestWithURL:videosUrl];
-    [FTResourceDownloader getRequest:request withHandler:handler];
+    [FTResourceDownloader getRequest:request withHandler:^(id object, NSError *error) {
+        handler([FTResponseParser parseEvents:object], error);
+    }];
 }
 
 - (void)getAllEntitiesUsingLimit:(NSNumber *)limit orderedByDescending:(BOOL)ordered withCompletionHandler:(FTResponseHandler)handler {
@@ -48,7 +69,9 @@ NSString *const EventsVideosResourceName = @"videos";
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?%@", [self.url absoluteString], queryString]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [FTResourceDownloader getRequest:request withHandler:handler];
+    [FTResourceDownloader getRequest:request withHandler:^(id object, NSError *error) {
+        handler([FTResponseParser parseEvents:object], error);
+    }];
 }
 
 @end

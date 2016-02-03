@@ -9,6 +9,7 @@
 #import "SpecHelper.h"
 #import "FTPresenterProvider.h"
 #import "FTBaseProvider.h"
+#import "FTPresenter.h"
 
 SpecBegin(FTPresenterProvider)
 
@@ -39,10 +40,11 @@ describe(@"FTPresenterProvider", ^{
             }];
         });
         
-        it(@"is expected to return an array", ^{
+        it(@"is expected to return an array of FTPresenter", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
                     expect(object).to.beAKindOf([NSArray class]);
+                    expect([object firstObject]).to.beAKindOf([FTPresenter class]);
                     done();
                 }];
             });
@@ -74,10 +76,11 @@ describe(@"FTPresenterProvider", ^{
                 }];
             });
             
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTPresenter", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@"aaron-bedra" withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTPresenter class]);
                         done();
                     }];
                 });
@@ -108,10 +111,11 @@ describe(@"FTPresenterProvider", ^{
                 }];
             });
             
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTPresenter", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@22 withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTPresenter class]);
                         done();
                     }];
                 });
@@ -145,10 +149,11 @@ describe(@"FTPresenterProvider", ^{
         });
         
         context(@"when working with id", ^{
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTPresenter", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getVideosForPresenter:@22 withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTPresenter class]);
                         done();
                     }];
                 });
@@ -165,10 +170,11 @@ describe(@"FTPresenterProvider", ^{
         });
         
         context(@"when working with name", ^{
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTPresenter", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getVideosForPresenter:@"aaron-bedra" withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTPresenter class]);
                         done();
                     }];
                 });

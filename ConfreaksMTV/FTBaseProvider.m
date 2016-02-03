@@ -27,15 +27,12 @@ NSString *const BaseApiURL = @"FTBaseApiURL";
 }
 
 - (void)getAllEntitiesWithCompletionHandler:(FTResponseHandler)handler {
-    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
-    [FTResourceDownloader getRequest:request withHandler:handler];
+    [self doesNotRecognizeSelector:_cmd];
 }
 
 - (void)getEntityForId:(id)entityId withCompletionHandler:(FTResponseHandler)handler {
-    NSString *castedEntityId = [entityId isKindOfClass:[NSString class]] ? (NSString *)entityId : [entityId stringValue];
-    NSURL *resourceUrl = [self.url URLByAppendingPathComponent:castedEntityId];
-    NSURLRequest *request = [NSURLRequest requestWithURL:resourceUrl];
-    [FTResourceDownloader getRequest:request withHandler:handler];
+    [self doesNotRecognizeSelector:_cmd];
 }
+
 
 @end

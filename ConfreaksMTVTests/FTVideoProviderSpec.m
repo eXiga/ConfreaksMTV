@@ -9,6 +9,7 @@
 #import "SpecHelper.h"
 #import "FTVideoProvider.h"
 #import "FTBaseProvider.h"
+#import "FTVideo.h"
 
 SpecBegin(FTVideoProvider)
 
@@ -40,10 +41,11 @@ describe(@"FTVideoProvider", ^{
                 }];
             });
             
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTVideo", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTVideo class]);
                         done();
                     }];
                 });
@@ -75,10 +77,11 @@ describe(@"FTVideoProvider", ^{
                 }];
             });
             
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTVideo", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getAllEntitiesUsingLimit:@5 orderedByDescending:NO withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTVideo class]);
                         done();
                     }];
                 });
@@ -110,10 +113,11 @@ describe(@"FTVideoProvider", ^{
                 }];
             });
             
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTVideo", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getAllEntitiesUsingLimit:@4 orderedByDescending:YES withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTVideo class]);
                         done();
                     }];
                 });
@@ -145,10 +149,11 @@ describe(@"FTVideoProvider", ^{
             }];
         });
         
-        it(@"is expected to return an array", ^{
+        it(@"is expected to return an array of FTVideo", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getVideoCountWithCompletionHandler:^(id object, NSError *error) {
                     expect(object).to.beAKindOf([NSArray class]);
+                    expect([object firstObject]).to.beAKindOf([FTVideo class]);
                     done();
                 }];
             });
@@ -180,10 +185,11 @@ describe(@"FTVideoProvider", ^{
             }];
         });
         
-        it(@"is expected to return an array", ^{
+        it(@"is expected to return an array of FTVideo", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getFeaturedVideoWithCompletionHandler:^(id object, NSError *error) {
                     expect(object).to.beAKindOf([NSArray class]);
+                    expect([object firstObject]).to.beAKindOf([FTVideo class]);
                     done();
                 }];
             });
@@ -215,10 +221,11 @@ describe(@"FTVideoProvider", ^{
                 }];
             });
             
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTVideo", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@"rubyconf2007-essential-incompleteness-in-program-modeling" withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTVideo class]);
                         done();
                     }];
                 });
@@ -249,10 +256,11 @@ describe(@"FTVideoProvider", ^{
                 }];
             });
             
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTVideo", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@42 withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTVideo class]);
                         done();
                     }];
                 });
@@ -285,10 +293,11 @@ describe(@"FTVideoProvider", ^{
         });
         
         context(@"when working with id", ^{
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTVideo", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getVideosForPresenter:@23 atEvent:@9 withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTVideo class]);
                         done();
                     }];
                 });
@@ -305,10 +314,11 @@ describe(@"FTVideoProvider", ^{
         });
         
         context(@"when working with shortcode", ^{
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTVideo", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getVideosForPresenter:@"aaron-bedra" atEvent:@"rubyconf2007" withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTVideo class]);
                         done();
                     }];
                 });

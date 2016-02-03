@@ -9,6 +9,8 @@
 #import "SpecHelper.h"
 #import "FTEventProvider.h"
 #import "FTBaseProvider.h"
+#import "FTEvent.h"
+
 
 SpecBegin(FTEventProvider)
 
@@ -40,10 +42,11 @@ describe(@"FTEventProvider", ^{
                 }];
             });
             
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTEvent", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTEvent class]);
                         done();
                     }];
                 });
@@ -75,10 +78,11 @@ describe(@"FTEventProvider", ^{
                 }];
             });
             
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTEvent", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getAllEntitiesUsingLimit:@6 orderedByDescending:NO withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTEvent class]);
                         done();
                     }];
                 });
@@ -110,10 +114,11 @@ describe(@"FTEventProvider", ^{
                 }];
             });
             
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTEvent", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getAllEntitiesUsingLimit:@5 orderedByDescending:YES withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTEvent class]);
                         done();
                     }];
                 });
@@ -146,10 +151,11 @@ describe(@"FTEventProvider", ^{
                 }];
             });
             
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTEvent", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@"g5thrive" withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTEvent class]);
                         done();
                     }];
                 });
@@ -180,10 +186,11 @@ describe(@"FTEventProvider", ^{
                 }];
             });
             
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTEvent", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@42 withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTEvent class]);
                         done();
                     }];
                 });
@@ -216,10 +223,11 @@ describe(@"FTEventProvider", ^{
         });
         
         context(@"when working with id", ^{
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTEvent", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getVideosForEvent:@42 withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTEvent class]);
                         done();
                     }];
                 });
@@ -236,10 +244,11 @@ describe(@"FTEventProvider", ^{
         });
         
         context(@"when working with shortcode", ^{
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTEvent", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getVideosForEvent:@"g5thrive" withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTEvent class]);
                         done();
                     }];
                 });
@@ -271,10 +280,11 @@ describe(@"FTEventProvider", ^{
             }];
         });
         
-        it(@"is expected to return an array", ^{
+        it(@"is expected to return an array of FTEvent", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getEventCountWithCompletionHandler:^(id object, NSError *error) {
                     expect(object).to.beAKindOf([NSArray class]);
+                    expect([object firstObject]).to.beAKindOf([FTEvent class]);
                     done();
                 }];
             });

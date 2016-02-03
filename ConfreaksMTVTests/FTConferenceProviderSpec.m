@@ -9,6 +9,7 @@
 #import "SpecHelper.h"
 #import "FTConferenceProvider.h"
 #import "FTBaseProvider.h"
+#import "FTConference.h"
 
 SpecBegin(FTConferenceProvider)
 
@@ -39,10 +40,11 @@ describe(@"FTConferenceProvider", ^{
             }];
         });        
         
-        it(@"is expected to return an array", ^{
+        it(@"is expected to return an array of FTConference", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
                     expect(object).to.beAKindOf([NSArray class]);
+                    expect([object firstObject]).to.beAKindOf([FTConference class]);
                     done();
                 }];
             });
@@ -74,10 +76,11 @@ describe(@"FTConferenceProvider", ^{
                 }];
             });
             
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTConference", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@"aloha-ruby" withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTConference class]);
                         done();
                     }];
                 });
@@ -108,10 +111,11 @@ describe(@"FTConferenceProvider", ^{
                 }];
             });
             
-            it(@"is expected to return an array", ^{
+            it(@"is expected to return an array of FTConference", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@38 withCompletionHandler:^(id object, NSError *error) {
                         expect(object).to.beAKindOf([NSArray class]);
+                        expect([object firstObject]).to.beAKindOf([FTConference class]);
                         done();
                     }];
                 });
