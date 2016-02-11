@@ -54,7 +54,9 @@ describe(@"FTVideoProvider", ^{
             it(@"is expected to get all videos from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
                         expect(object).to.haveACountOf(10);
+                        expect([object firstObject]).to.beAKindOf([FTVideo class]);
                         done();
                     }];
                 });
@@ -90,7 +92,9 @@ describe(@"FTVideoProvider", ^{
             it(@"is expected to get limited videos from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getAllEntitiesUsingLimit:@5 orderedByDescending:NO withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
                         expect(object).to.haveACountOf(5);
+                        expect([object firstObject]).to.beAKindOf([FTVideo class]);
                         done();
                     }];
                 });
@@ -126,7 +130,9 @@ describe(@"FTVideoProvider", ^{
             it(@"is expected to get sorted videos from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getAllEntitiesUsingLimit:@4 orderedByDescending:YES withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
                         expect(object).to.haveACountOf(4);
+                        expect([object firstObject]).to.beAKindOf([FTVideo class]);
                         done();
                     }];
                 });
@@ -162,7 +168,9 @@ describe(@"FTVideoProvider", ^{
         it(@"is expected to get videos count from service", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getVideoCountWithCompletionHandler:^(id object, NSError *error) {
+                    expect(object).to.beAKindOf([NSArray class]);
                     expect(object).to.haveACountOf(1);
+                    expect([object firstObject]).to.beAKindOf([FTVideo class]);
                     done();
                 }];
             });
@@ -198,7 +206,9 @@ describe(@"FTVideoProvider", ^{
         it(@"is expected to get featured video from service", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getFeaturedVideoWithCompletionHandler:^(id object, NSError *error) {
+                    expect(object).to.beAKindOf([NSArray class]);
                     expect(object).to.haveACountOf(1);
+                    expect([object firstObject]).to.beAKindOf([FTVideo class]);
                     done();
                 }];
             });
@@ -234,7 +244,9 @@ describe(@"FTVideoProvider", ^{
             it(@"is expected to get one video from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@"rubyconf2007-essential-incompleteness-in-program-modeling" withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
                         expect(object).to.haveACountOf(1);
+                        expect([object firstObject]).to.beAKindOf([FTVideo class]);
                         done();
                     }];
                 });
@@ -269,7 +281,9 @@ describe(@"FTVideoProvider", ^{
             it(@"is expected to get one video from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@42 withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
                         expect(object).to.haveACountOf(1);
+                        expect([object firstObject]).to.beAKindOf([FTVideo class]);
                         done();
                     }];
                 });

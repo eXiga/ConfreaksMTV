@@ -53,7 +53,9 @@ describe(@"FTConferenceProvider", ^{
         it(@"is expected to get all conferences from service", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
+                    expect(object).to.beAKindOf([NSArray class]);
                     expect(object).to.haveACountOf(5);
+                    expect([object firstObject]).to.beAKindOf([FTConference class]);
                     done();
                 }];
             });
@@ -89,7 +91,9 @@ describe(@"FTConferenceProvider", ^{
             it(@"is expected to get one conference from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@"aloha-ruby" withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
                         expect(object).to.haveACountOf(1);
+                        expect([object firstObject]).to.beAKindOf([FTConference class]);
                         done();
                     }];
                 });
@@ -124,7 +128,9 @@ describe(@"FTConferenceProvider", ^{
             it(@"is expected to get one conference from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@38 withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
                         expect(object).to.haveACountOf(1);
+                        expect([object firstObject]).to.beAKindOf([FTConference class]);
                         done();
                     }];
                 });

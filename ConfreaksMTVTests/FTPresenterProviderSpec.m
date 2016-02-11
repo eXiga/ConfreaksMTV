@@ -53,7 +53,9 @@ describe(@"FTPresenterProvider", ^{
         it(@"is expected to get all presenters from service", ^{
             waitUntil(^(DoneCallback done) {
                 [provider getAllEntitiesWithCompletionHandler:^(id object, NSError *error) {
+                    expect(object).to.beAKindOf([NSArray class]);
                     expect(object).to.haveACountOf(5);
+                    expect([object firstObject]).to.beAKindOf([FTPresenter class]);
                     done();
                 }];
             });
@@ -89,7 +91,9 @@ describe(@"FTPresenterProvider", ^{
             it(@"is expected to get one presenter from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@"aaron-bedra" withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
                         expect(object).to.haveACountOf(1);
+                        expect([object firstObject]).to.beAKindOf([FTPresenter class]);
                         done();
                     }];
                 });
@@ -124,7 +128,9 @@ describe(@"FTPresenterProvider", ^{
             it(@"is expected to get one presenter from service", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getEntityForId:@22 withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
                         expect(object).to.haveACountOf(1);
+                        expect([object firstObject]).to.beAKindOf([FTPresenter class]);
                         done();
                     }];
                 });
@@ -162,7 +168,9 @@ describe(@"FTPresenterProvider", ^{
             it(@"is expected to get all presenter's videos", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getVideosForPresenter:@22 withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
                         expect(object).to.haveACountOf(3);
+                        expect([object firstObject]).to.beAKindOf([FTPresenter class]);
                         done();
                     }];
                 });
@@ -183,7 +191,9 @@ describe(@"FTPresenterProvider", ^{
             it(@"is expected to get all presenter's videos", ^{
                 waitUntil(^(DoneCallback done) {
                     [provider getVideosForPresenter:@"aaron-bedra" withCompletionHandler:^(id object, NSError *error) {
+                        expect(object).to.beAKindOf([NSArray class]);
                         expect(object).to.haveACountOf(3);
+                        expect([object firstObject]).to.beAKindOf([FTPresenter class]);
                         done();
                     }];
                 });
