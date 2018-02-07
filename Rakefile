@@ -3,8 +3,8 @@ require 'rake'
 WORKSPACE_NAME = 'ConfreaksMTV.xcworkspace'
 SCHEME_NAME = "ConfreaksMTV"
 
-IPAD_AIR2_OS_9 = 'platform=iOS Simulator,name=iPad 2,OS=9.2'
-IPHONE_6_OS_9 = 'platform=iOS Simulator,name=iPhone 6,OS=9.2'
+IPAD_AIR2_OS_11 = 'platform=iOS Simulator,name=iPad 2,OS=11.2'
+IPHONE_X_OS_11 = 'platform=iOS Simulator,name=iPhone X,OS=11.2'
 
 def execute(command)
   system(command) or raise "** BUILD FAILED **"
@@ -19,14 +19,14 @@ def test(scheme, device)
 end
 
 namespace :test do
-  desc 'Run specs on iPad 2, iOS 9'
+  desc 'Run specs on iPad 2, iOS 11'
   task :ipad do
-    test(SCHEME_NAME, IPAD_AIR2_OS_9)
+    test(SCHEME_NAME, IPAD_AIR2_OS_11)
   end
 
-  desc 'Run specs on iPhone 6, iOS 9'
+  desc 'Run specs on iPhone 6, iOS 11'
   task :iphone do
-    test(SCHEME_NAME, IPHONE_6_OS_9)
+    test(SCHEME_NAME, IPHONE_X_OS_11)
   end
 end
 
@@ -34,4 +34,4 @@ task :build do
   build(SCHEME_NAME)
 end
 
-task default: 'test:ipad' #i don't know why i prefer to run tests on iPad
+task default: 'test:iphone' #i don't know why i prefer to run tests on iPad
