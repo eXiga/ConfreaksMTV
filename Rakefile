@@ -34,4 +34,4 @@ task :build do
   build(SCHEME_NAME)
 end
 
-task default: 'test:iphone' #i don't know why i prefer to run tests on iPad
+task default: 'test:iphone'

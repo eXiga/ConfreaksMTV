@@ -36,27 +36,12 @@ describe(@"FTConference", ^{
             expect(conference.name).to.equal(@"Airbnb Tech Talks");
         });
         
-        it(@"is expected to change name correctly", ^{
-            conference.name = @"Test Name";
-            expect(conference.name).to.equal(@"Test Name");
-        });
-        
         it(@"is expected to return correct id", ^{
             expect(conference.conferenceId).to.equal(@58);
         });
         
-        it(@"is expected to change id correctly", ^{
-            conference.conferenceId = @123;
-            expect(conference.conferenceId).to.equal(@123);
-        });
-        
         it(@"is expected to return correct number of events", ^{
             expect(conference.eventCount).to.equal(@2);
-        });
-        
-        it(@"is expected to change number of events correctly", ^{
-            conference.eventCount = @10;
-            expect(conference.eventCount).to.equal(@10);
         });
         
         it(@"is expected for events id array to be nil", ^{
@@ -73,27 +58,12 @@ describe(@"FTConference", ^{
             expect(conference.name).to.equal(@"Burlington Ruby");
         });
         
-        it(@"is expected to change name correctly", ^{
-            conference.name = @"Test Name 2";
-            expect(conference.name).to.equal(@"Test Name 2");
-        });
-        
         it(@"is expected to return correct id", ^{
             expect(conference.conferenceId).to.equal(@78);
         });
         
-        it(@"is expected to change id correctly", ^{
-            conference.conferenceId = @321;
-            expect(conference.conferenceId).to.equal(@321);
-        });
-        
         it(@"is expected to return correct number of events", ^{
             expect(conference.eventCount).to.equal(@2);
-        });
-        
-        it(@"is expected to change number of events correctly", ^{
-            conference.eventCount = @7;
-            expect(conference.eventCount).to.equal(@7);
         });
         
         it(@"is expected to return correct amount of events", ^{

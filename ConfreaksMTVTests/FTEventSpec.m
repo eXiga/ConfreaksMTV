@@ -34,36 +34,16 @@ describe(@"FTEvent", ^{
             expect(event.eventId).to.equal(@293);
         });
         
-        it(@"is expected to change id correctly", ^{
-            event.eventId = @123;
-            expect(event.eventId).to.equal(@123);
-        });
-        
         it(@"is expected to return correct display name", ^{
             expect(event.displayName).to.equal(@"Ruby Conference 2015");
         });
-        
-        it(@"is expected to change display name correctly", ^{
-            event.displayName = @"Test Display Name";
-            expect(event.displayName).to.equal(@"Test Display Name");
-        });
-        
+
         it(@"is expected to return correct short code", ^{
             expect(event.shortCode).to.equal(@"rubyconf2015");
         });
         
-        it(@"is expected to change short code correctly", ^{
-            event.shortCode = @"testshort";
-            expect(event.shortCode).to.equal(@"testshort");
-        });
-        
         it(@"is expected to return correct conference name", ^{
             expect(event.conferenceName).to.equal(@"Ruby Conference");
-        });
-        
-        it(@"is expected to change conference name correctly", ^{
-            event.conferenceName = @"Test Conference";
-            expect(event.conferenceName).to.equal(@"Test Conference");
         });
         
         it(@"is expected for conference id to be nil", ^{
@@ -98,11 +78,6 @@ describe(@"FTEvent", ^{
             expect(event.eventId).to.equal(@293);
         });
         
-        it(@"is expected to change id correctly", ^{
-            event.eventId = @321;
-            expect(event.eventId).to.equal(@321);
-        });
-        
         it(@"is expected for display name to be nil", ^{
             expect(event.displayName).to.beNil();
         });
@@ -111,45 +86,20 @@ describe(@"FTEvent", ^{
             expect(event.shortCode).to.equal(@"rubyconf2015");
         });
         
-        it(@"is expected to change short code correctly", ^{
-            event.shortCode = @"testshort";
-            expect(event.shortCode).to.equal(@"testshort");
-        });
-        
         it(@"is expected to return correct conference name", ^{
             expect(event.conferenceName).to.equal(@"Ruby Conference");
-        });
-        
-        it(@"is expected to change conference name correctly", ^{
-            event.conferenceName = @"Test Conference";
-            expect(event.conferenceName).to.equal(@"Test Conference");
         });
         
         it(@"is expected to return correct conference id", ^{
             expect(event.conferenceId).to.equal(@3);
         });
         
-        it(@"is expected to change conference id correctly", ^{
-            event.conferenceId = @7;
-            expect(event.conferenceId).to.equal(@7);
-        });
-        
         it(@"is expected return correct logo address", ^{
             expect(event.logo).to.equal(@"http://s3-us-west-2.amazonaws.com/confreaks-tv3/production/events/logos/000/000/293/rc-main-logo-2-original.png?1445375694");
         });
         
-        it(@"is expected to change logo address correctly", ^{
-            event.logo = @"test://logo";
-            expect(event.logo).to.equal(@"test://logo");
-        });
-        
         it(@"is expected return correct video count", ^{
             expect(event.videoCount).to.equal(@0);
-        });
-        
-        it(@"is expected to change video count correctly", ^{
-            event.videoCount = @10;
-            expect(event.videoCount).to.equal(@10);
         });
         
         it(@"is expected to return correct start date/time", ^{
