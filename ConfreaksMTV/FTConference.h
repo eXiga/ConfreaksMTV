@@ -10,10 +10,10 @@
 
 @interface FTConference : NSObject
 
-@property (strong, nonatomic) NSNumber *conferenceId;
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSNumber *eventCount;
-@property (strong, nonatomic) NSMutableArray *eventsId;
+@property (strong, readonly, nonatomic) NSNumber *conferenceId;
+@property (strong, readonly, nonatomic) NSString *name;
+@property (strong, readonly, nonatomic) NSNumber *eventCount;
+@property (strong, readonly, nonatomic) NSMutableArray *eventsId;
 
 - (instancetype)initWithParams:(NSDictionary *)params;
 

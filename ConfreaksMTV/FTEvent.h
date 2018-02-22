@@ -12,15 +12,15 @@
 
 @interface FTEvent : NSObject
 
-@property (strong, nonatomic) NSNumber *eventId;
-@property (strong, nonatomic) NSString *displayName;
-@property (strong, nonatomic) NSString *shortCode;
-@property (strong, nonatomic) NSDate *startAt;
-@property (strong, nonatomic) NSDate *endAt;
-@property (strong, nonatomic) NSNumber *videoCount;
-@property (strong, nonatomic) NSString *logo;
-@property (strong, nonatomic) NSNumber *conferenceId;
-@property (strong, nonatomic) NSString *conferenceName;
+@property (strong, readonly, nonatomic) NSNumber *eventId;
+@property (strong, readonly, nonatomic) NSString *displayName;
+@property (strong, readonly, nonatomic) NSString *shortCode;
+@property (strong, readonly, nonatomic) NSDate *startAt;
+@property (strong, readonly, nonatomic) NSDate *endAt;
+@property (strong, readonly, nonatomic) NSNumber *videoCount;
+@property (strong, readonly, nonatomic) NSString *logo;
+@property (strong, readonly, nonatomic) NSNumber *conferenceId;
+@property (strong, readonly, nonatomic) NSString *conferenceName;
 
 - (instancetype)initWithParams:(NSDictionary *)params;
 

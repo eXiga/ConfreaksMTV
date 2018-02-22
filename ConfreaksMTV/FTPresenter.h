@@ -10,13 +10,13 @@
 
 @interface FTPresenter : NSObject
 
-@property (strong, nonatomic) NSNumber *presenterId;
-@property (strong, nonatomic) NSString *slug;
-@property (strong, nonatomic) NSString *firstName;
-@property (strong, nonatomic) NSString *lastName;
-@property (strong, nonatomic) NSString *akaName;
-@property (strong, nonatomic) NSString *twitterHandle;
-@property (strong, nonatomic) NSNumber *videoCount;
+@property (strong, readonly, nonatomic) NSNumber *presenterId;
+@property (strong, readonly, nonatomic) NSString *slug;
+@property (strong, readonly, nonatomic) NSString *firstName;
+@property (strong, readonly, nonatomic) NSString *lastName;
+@property (strong, readonly, nonatomic) NSString *akaName;
+@property (strong, readonly, nonatomic) NSString *twitterHandle;
+@property (strong, readonly, nonatomic) NSNumber *videoCount;
 
 - (instancetype)initWithParams:(NSDictionary *)params;
 

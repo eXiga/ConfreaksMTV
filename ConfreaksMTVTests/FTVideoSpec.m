@@ -31,36 +31,16 @@ describe(@"FTVideo", ^{
         expect(video.videoId).to.equal(@1287);
     });
     
-    it(@"is expected to change id correctly", ^{
-        video.videoId = @123;
-        expect(video.videoId).to.equal(@123);
-    });
-    
     it(@"is expected to return correct slug", ^{
         expect(video.slug).to.equal(@"rubyconf2012-y-not-adventures-in-functional-programming");
-    });
-    
-    it(@"is expected to change slug correctly", ^{
-        video.slug = @"test-slug";
-        expect(video.slug).to.equal(@"test-slug");
     });
     
     it(@"is expected to return correct title", ^{
         expect(video.title).to.equal(@"Y Not -- Adventures in Functional Programming");
     });
-    
-    it(@"is expected to change title correctly", ^{
-        video.title = @"Test Title";
-        expect(video.title).to.equal(@"Test Title");
-    });
-    
+
     it(@"is expected to return correct image url", ^{
         expect(video.image).to.equal(@"http://s3-us-west-2.amazonaws.com/confreaks-tv3/production/videos/images/000/001/287/1287-rubyconf2012-y-not-adventures-in-functional-programming-thumb_0004-original.png?1422314013");
-    });
-    
-    it(@"is expected to change image url correctly", ^{
-        video.image = @"http://test.png";
-        expect(video.image).to.equal(@"http://test.png");
     });
     
     it(@"is expected to return correct 'recorded at' date/time", ^{
@@ -72,27 +52,12 @@ describe(@"FTVideo", ^{
         expect(video.event).to.equal(@"Ruby Conference 2012");
     });
     
-    it(@"is expected to change event correctly", ^{
-        video.event = @"Test Event";
-        expect(video.event).to.equal(@"Test Event");
-    });
-    
     it(@"is expected to return correct rating", ^{
         expect(video.rating).to.equal(@"Everyone");
     });
     
-    it(@"is expected to change rating correctly", ^{
-        video.rating = @"Test Rating";
-        expect(video.rating).to.equal(@"Test Rating");
-    });
-    
     it(@"is expected to return correct abstract", ^{
         expect(video.abstract).to.equal(@"One of the deepest mysteries in the functional programming world is the Y-Combinator. Many have heard of it, but few have mastered its mysteries. Although fairly useless in real world software, understanding how the Y-Combinator works and why it is important gives the student an important insight into the nature of functional programming.\r\n\r\nJoin with us on this journey of understanding. Be prepared to curry your functions and bind your lambdas as we delve into the whys and wherefores of this paragon of functional programming. Although you will probably never have a need for the combinator, the effort put forth to understand it will improve your functional programming chops. This talk is not for the faint of heart, but the successful student will be richly rewarded.\r\n\r\nAlso, you will understand why \"Y-Combinator\" is the perfect name for Paul Graham's start-up funding company.");
-    });
-    
-    it(@"is expected to change abstract correctly", ^{
-        video.abstract = @"Very long test description";
-        expect(video.abstract).to.equal(@"Very long test description");
     });
     
     it(@"is expected to return correct post date/time", ^{
@@ -108,54 +73,24 @@ describe(@"FTVideo", ^{
         expect(video.host).to.equal(@"youtube");
     });
     
-    it(@"is expected to change host correctly", ^{
-        video.host = @"youtest";
-        expect(video.host).to.equal(@"youtest");
-    });
-    
     it(@"is expected to return correct embed code", ^{
         expect(video.embedCode).to.equal(@"FITJMJjASUs");
-    });
-    
-    it(@"is expected to change embed code correctly", ^{
-        video.embedCode = @"abRAKadabRRa";
-        expect(video.embedCode).to.equal(@"abRAKadabRRa");
     });
     
     it(@"is expected to return correct number of views", ^{
         expect(video.views).to.equal(@70454);
     });
     
-    it(@"is expected to change number of views correctly", ^{
-        video.views = @128;
-        expect(video.views).to.equal(@128);
-    });
-    
     it(@"is expected to return correct number of views in last 7 days", ^{
         expect(video.viewsLast7).to.equal(@62);
-    });
-    
-    it(@"is expected to change number of views in last 7 days correctly", ^{
-        video.viewsLast7 = @256;
-        expect(video.viewsLast7).to.equal(@256);
     });
     
     it(@"is expected to return correct number of views in last 30 days", ^{
         expect(video.viewsLast30).to.equal(@283);
     });
     
-    it(@"is expected to change number of views in last 30 days correctly", ^{
-        video.viewsLast30 = @512;
-        expect(video.viewsLast30).to.equal(@512);
-    });
-    
     it(@"is expected to return correct license", ^{
         expect(video.license).to.equal(@"cc-by-sa-3.0");
-    });
-    
-    it(@"is expected to change license correctly", ^{
-        video.license = @"test-license";
-        expect(video.license).to.equal(@"test-license");
     });
     
     it(@"is expected to return correct attribution", ^{
