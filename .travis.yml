@@ -2,7 +2,7 @@ language: objective-c
 osx_image: xcode9.3
 xcode_sdk: iphonesimulator11.2
 script:
-  - rake test:iphone
+  - rake test
 notifications:
   slack:
     secure: r0xA1DIbTB3DgXFiK2HPps04CEziGGmi/px4EmeFdG73BOjjvQWO8mSkFtCSSQgWXJUpZL55YDoKnxLoNeUUW1Gh8/Fzl7nwNlKk+GmS7LA/5l3yEh1mWLcyKK8r0Ei4t+GdY1NWBONKFV4q0pjsuzINS3fnUU/8vW9Gba+1T3Q02QdX5OxpcZ3j/Z+tVB3a+fXs3Ys0ZpkAw0om9brRN4XHZrS2jHodv8DCvdYo5kn8YMeMKWmS4T+lX0MgVr96kgwL5LAvSeQpV/AH5Yh14f6/gKZlA/XGjRUlj/o1gfesN5SwRr52C+PLSM1+AIaBiBjnStRzXXUAoL4IQEx014socpB3BrRGXhxsxautK2gjIgebV2qVOYY25bBZ3JYyVwT51dqUDN9MGVWaluDxrYc+RZsPtQ70BA+kn49BVDpE+J7UTp+6ZCpXoO47YSNSe3VHeD2VNcsdPx75PuqkXAyE//kKmsqUmaRUZF5uMgjZZ2o21CGzswRZgULLl+yBpKH1WjnPZUekW6kJXaxS9glDWyv3p0VsnPOt3ko1WRBknasVwrAX2Mgvv2b41hE6asPH1pWNUsciOyr73Slej3bhBk69bBcrjEqu7BmOfKDykYbldDkBh6NYHcfQ/YPeewWa6pkXITwAHBs2W7287kkRwXkHEq+qDkvW55g4zq4=

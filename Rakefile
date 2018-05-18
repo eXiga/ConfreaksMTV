@@ -40,8 +40,11 @@ namespace :test do
   end
 end
 
+task :test do
+  Rake::Task['test:mobile:iphone'].invoke
+  Rake::Task['test:api:ios'].invoke
+end
+
 task :build do
   build(MOBILE_APP_SCHEME_NAME)
 end
-
-task default: 'test:iphone'
