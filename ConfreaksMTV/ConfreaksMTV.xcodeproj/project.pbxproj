@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6BD560CD2F34CE7D73FD8C8E /* libPods-ConfreaksMTV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 837CF902DD9249C17A175A7A /* libPods-ConfreaksMTV.a */; };
 		96B8725288F3208B2E5F2A5D /* libPods-ConfreaksMTVTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFBC2FD0831C852F9785A373 /* libPods-ConfreaksMTVTests.a */; };
 		B01220371BB70F900018D566 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B01220361BB70F900018D566 /* main.m */; };
 		B012203A1BB70F900018D566 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B01220391BB70F900018D566 /* AppDelegate.m */; };
@@ -65,13 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02A738B1F503D30847CF2A1E /* Pods-ConfreaksMTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfreaksMTV/Pods-ConfreaksMTV.release.xcconfig"; sourceTree = "<group>"; };
-		0669339EA0FBF08FDA9E77FF /* Pods-ConfreaksMTVUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTVUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfreaksMTVUITests/Pods-ConfreaksMTVUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1D0A155A0ADDCA8B17C768C7 /* Pods-ConfreaksMTVTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTVTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests.release.xcconfig"; sourceTree = "<group>"; };
 		2F5E6B6ECFCAE1F0D945B442 /* libPods-ConfreaksMTVUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConfreaksMTVUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		837CF902DD9249C17A175A7A /* libPods-ConfreaksMTV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConfreaksMTV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		98ED5794CF14371D40999DAC /* Pods-ConfreaksMTVUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTVUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfreaksMTVUITests/Pods-ConfreaksMTVUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9A8AC3638A7C9C8C2E99A1F8 /* Pods-ConfreaksMTVTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTVTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests.release.xcconfig"; sourceTree = "<group>"; };
-		A1F6A1FACC93BB373EC78BBA /* Pods-ConfreaksMTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfreaksMTV/Pods-ConfreaksMTV.debug.xcconfig"; sourceTree = "<group>"; };
 		B01220321BB70F900018D566 /* ConfreaksMTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConfreaksMTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01220361BB70F900018D566 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B01220381BB70F900018D566 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,7 +126,9 @@
 		D7E89B0A1BD9643C003D7FE1 /* FTPresenterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPresenterSpec.m; sourceTree = "<group>"; };
 		D7E89B0C1BD96BB6003D7FE1 /* FTVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTVideo.h; sourceTree = "<group>"; };
 		D7E89B0D1BD96BB6003D7FE1 /* FTVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTVideo.m; sourceTree = "<group>"; };
-		E64C25B2E5BDDA2FD6ECF31B /* Pods-ConfreaksMTVTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTVTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DDB1FCE2E014182742CC9D12 /* Pods-ConfreaksMTVUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTVUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ConfreaksMTVUITests/Pods-ConfreaksMTVUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE6F0BCCEE1310DDF6324C4E /* Pods-ConfreaksMTVTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTVTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5135FA9BE086BA48DB364B0 /* Pods-ConfreaksMTVUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksMTVUITests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-ConfreaksMTVUITests/Pods-ConfreaksMTVUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +136,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD560CD2F34CE7D73FD8C8E /* libPods-ConfreaksMTV.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,15 +158,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		64BD716800150A7CFA621742 /* Pods */ = {
+		3DAB7CF83B0B71DDD8816925 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A1F6A1FACC93BB373EC78BBA /* Pods-ConfreaksMTV.debug.xcconfig */,
-				02A738B1F503D30847CF2A1E /* Pods-ConfreaksMTV.release.xcconfig */,
-				E64C25B2E5BDDA2FD6ECF31B /* Pods-ConfreaksMTVTests.debug.xcconfig */,
-				9A8AC3638A7C9C8C2E99A1F8 /* Pods-ConfreaksMTVTests.release.xcconfig */,
-				98ED5794CF14371D40999DAC /* Pods-ConfreaksMTVUITests.debug.xcconfig */,
-				0669339EA0FBF08FDA9E77FF /* Pods-ConfreaksMTVUITests.release.xcconfig */,
+				EE6F0BCCEE1310DDF6324C4E /* Pods-ConfreaksMTVTests.debug.xcconfig */,
+				1D0A155A0ADDCA8B17C768C7 /* Pods-ConfreaksMTVTests.release.xcconfig */,
+				DDB1FCE2E014182742CC9D12 /* Pods-ConfreaksMTVUITests.debug.xcconfig */,
+				F5135FA9BE086BA48DB364B0 /* Pods-ConfreaksMTVUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -182,8 +176,8 @@
 				B012204E1BB70F900018D566 /* ConfreaksMTVTests */,
 				B01220591BB70F900018D566 /* ConfreaksMTVUITests */,
 				B01220331BB70F900018D566 /* Products */,
-				64BD716800150A7CFA621742 /* Pods */,
 				DA0282F4E5420FBF59D13A7F /* Frameworks */,
+				3DAB7CF83B0B71DDD8816925 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -386,12 +380,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B012205F1BB70F900018D566 /* Build configuration list for PBXNativeTarget "ConfreaksMTV" */;
 			buildPhases = (
-				1CC4AC6B90C7C9519838B9A3 /* [CP] Check Pods Manifest.lock */,
 				B012202E1BB70F900018D566 /* Sources */,
 				B012202F1BB70F900018D566 /* Frameworks */,
 				B01220301BB70F900018D566 /* Resources */,
-				78BAC5A637D967BBA4980CFB /* [CP] Embed Pods Frameworks */,
-				725A3FC37C02EBA4AA1660B4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -515,24 +506,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1CC4AC6B90C7C9519838B9A3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ConfreaksMTV-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		488903DEFFE7165B9294DD4B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -545,7 +518,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfreaksMTVUITests/Pods-ConfreaksMTVUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ConfreaksMTVUITests/Pods-ConfreaksMTVUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4B358EE467AB39DFE89E6D5E /* [CP] Check Pods Manifest.lock */ = {
@@ -578,37 +551,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfreaksMTVUITests/Pods-ConfreaksMTVUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		725A3FC37C02EBA4AA1660B4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfreaksMTV/Pods-ConfreaksMTV-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		78BAC5A637D967BBA4980CFB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfreaksMTV/Pods-ConfreaksMTV-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ConfreaksMTVUITests/Pods-ConfreaksMTVUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B37305CDA17467A9DC3A03ED /* [CP] Embed Pods Frameworks */ = {
@@ -623,7 +566,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C55397F0FFBCA480963AFE65 /* [CP] Copy Pods Resources */ = {
@@ -638,7 +581,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ConfreaksMTVTests/Pods-ConfreaksMTVTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CBAFE62E9324E60585288C1E /* [CP] Check Pods Manifest.lock */ = {
@@ -837,7 +780,6 @@
 		};
 		B01220601BB70F900018D566 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1F6A1FACC93BB373EC78BBA /* Pods-ConfreaksMTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ConfreaksMTV/Info.plist;
@@ -850,7 +792,6 @@
 		};
 		B01220611BB70F900018D566 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02A738B1F503D30847CF2A1E /* Pods-ConfreaksMTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ConfreaksMTV/Info.plist;
@@ -863,7 +804,7 @@
 		};
 		B01220631BB70F900018D566 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E64C25B2E5BDDA2FD6ECF31B /* Pods-ConfreaksMTVTests.debug.xcconfig */;
+			baseConfigurationReference = EE6F0BCCEE1310DDF6324C4E /* Pods-ConfreaksMTVTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ConfreaksMTVTests/Info.plist;
@@ -876,7 +817,7 @@
 		};
 		B01220641BB70F900018D566 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A8AC3638A7C9C8C2E99A1F8 /* Pods-ConfreaksMTVTests.release.xcconfig */;
+			baseConfigurationReference = 1D0A155A0ADDCA8B17C768C7 /* Pods-ConfreaksMTVTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ConfreaksMTVTests/Info.plist;
@@ -889,7 +830,7 @@
 		};
 		B01220661BB70F900018D566 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98ED5794CF14371D40999DAC /* Pods-ConfreaksMTVUITests.debug.xcconfig */;
+			baseConfigurationReference = DDB1FCE2E014182742CC9D12 /* Pods-ConfreaksMTVUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ConfreaksMTVUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -902,7 +843,7 @@
 		};
 		B01220671BB70F900018D566 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0669339EA0FBF08FDA9E77FF /* Pods-ConfreaksMTVUITests.release.xcconfig */;
+			baseConfigurationReference = F5135FA9BE086BA48DB364B0 /* Pods-ConfreaksMTVUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ConfreaksMTVUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

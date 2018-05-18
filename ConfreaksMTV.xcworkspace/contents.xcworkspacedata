@@ -2,7 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ConfreaksMTV.xcodeproj">
+      location = "group:ConfreaksMTV/ConfreaksMTV.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ConfreaksAPI/ConfreaksAPI.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

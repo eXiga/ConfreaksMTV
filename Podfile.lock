@@ -18,9 +18,6 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (4.3.0)
   - PromisesObjC (1.2)
   - Specta (1.0.4)
-  - Typhoon (3.3.3):
-    - Typhoon/no-arc (= 3.3.3)
-  - Typhoon/no-arc (3.3.3)
 
 DEPENDENCIES:
   - Expecta (~> 1.0.0)
@@ -28,7 +25,6 @@ DEPENDENCIES:
   - OHHTTPStubs
   - PromisesObjC (~> 1.2)
   - Specta (~> 1.0)
-  - Typhoon
 
 SPEC CHECKSUMS:
   Expecta: 9d1bff6c8b0eeee73a166a2ee898892478927a15
@@ -37,8 +33,7 @@ SPEC CHECKSUMS:
   OHHTTPStubs: 0aec5755528693a165bd616cb79f69387de306a8
   PromisesObjC: 7358d6a58e012d77f9af3831e3d1390b78319c71
   Specta: 69bb134672aae190a1379ff91df07dad8dd1f869
-  Typhoon: df3d23f59dccc8eda3e6535e58afd160ae60567e
 
-PODFILE CHECKSUM: 9fd37e523c2791500f49eccc118ab10c13c60958
+PODFILE CHECKSUM: d66df3cb2b348695c6be9cc6a09da8e70e3810a9
 
 COCOAPODS: 1.4.0
