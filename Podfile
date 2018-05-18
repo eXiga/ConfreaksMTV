@@ -2,6 +2,7 @@ platform :ios, '8.0'
 
 target 'ConfreaksMTV' do
   pod 'Typhoon'
+  pod 'PromisesObjC', '~> 1.2'
 end
 
 target 'ConfreaksMTVTests' do

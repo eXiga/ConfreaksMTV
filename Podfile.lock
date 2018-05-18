@@ -16,6 +16,7 @@ PODS:
   - OHHTTPStubs/NSURLSession (4.3.0):
     - OHHTTPStubs/Core
   - OHHTTPStubs/OHPathHelpers (4.3.0)
+  - PromisesObjC (1.2)
   - Specta (1.0.4)
   - Typhoon (3.3.3):
     - Typhoon/no-arc (= 3.3.3)
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - Expecta (~> 1.0.0)
   - OCMockito (~> 5.0)
   - OHHTTPStubs
+  - PromisesObjC (~> 1.2)
   - Specta (~> 1.0)
   - Typhoon
 
@@ -33,9 +35,10 @@ SPEC CHECKSUMS:
   OCHamcrest: 706bfbf69a3df55a873bad096014e80e2e8ca93c
   OCMockito: 063837a086c058e764fcd23e771089c1759e7197
   OHHTTPStubs: 0aec5755528693a165bd616cb79f69387de306a8
+  PromisesObjC: 7358d6a58e012d77f9af3831e3d1390b78319c71
   Specta: 69bb134672aae190a1379ff91df07dad8dd1f869
   Typhoon: df3d23f59dccc8eda3e6535e58afd160ae60567e
 
-PODFILE CHECKSUM: d0fc39cf729268ee6af852192bbce89407d98859
+PODFILE CHECKSUM: 9fd37e523c2791500f49eccc118ab10c13c60958
 
 COCOAPODS: 1.4.0
