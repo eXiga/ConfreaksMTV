@@ -1,7 +1,8 @@
 require 'rake'
 
 WORKSPACE_NAME = 'ConfreaksMTV.xcworkspace'
-SCHEME_NAME = "ConfreaksMTV"
+MOBILE_APP_SCHEME_NAME = "ConfreaksMTV"
+API_FRAMEWORK_SCHEME_NAME = "ConfreaksAPI"
 
 IPAD_AIR2_OS_11 = 'platform=iOS Simulator,name=iPad 2,OS=11.2'
 IPHONE_X_OS_11 = 'platform=iOS Simulator,name=iPhone X,OS=11.2'
@@ -19,19 +20,28 @@ def test(scheme, device)
 end
 
 namespace :test do
-  desc 'Run specs on iPad 2, iOS 11'
-  task :ipad do
-    test(SCHEME_NAME, IPAD_AIR2_OS_11)
+  namespace :mobile do
+    desc 'Run specs on iPad 2, iOS 11.2'
+    task :ipad do
+      test(MOBILE_APP_SCHEME_NAME, IPAD_AIR2_OS_11)
+    end
+
+    desc 'Run specs on iPhone X, iOS 11.2'
+    task :iphone do
+      test(MOBILE_APP_SCHEME_NAME, IPHONE_X_OS_11)
+    end
   end
 
-  desc 'Run specs on iPhone 6, iOS 11'
-  task :iphone do
-    test(SCHEME_NAME, IPHONE_X_OS_11)
+  namespace :api do
+    desc 'Run API specs on iPhone X, iOS 11.2'
+    task :ios do
+      test(API_FRAMEWORK_SCHEME_NAME, IPHONE_X_OS_11)
+    end
   end
 end
 
 task :build do
-  build(SCHEME_NAME)
+  build(MOBILE_APP_SCHEME_NAME)
 end
 
 task default: 'test:iphone'

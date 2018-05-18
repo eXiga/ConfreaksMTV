@@ -449,6 +449,7 @@
 					};
 					B012204A1BB70F900018D566 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 3RB8FR8769;
 						TestTargetID = B01220311BB70F900018D566;
 					};
 					B01220551BB70F900018D566 = {
@@ -807,6 +808,7 @@
 			baseConfigurationReference = EE6F0BCCEE1310DDF6324C4E /* Pods-ConfreaksMTVTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3RB8FR8769;
 				INFOPLIST_FILE = ConfreaksMTVTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = anton.kostenich.ConfreaksMTVTests;
@@ -820,6 +822,7 @@
 			baseConfigurationReference = 1D0A155A0ADDCA8B17C768C7 /* Pods-ConfreaksMTVTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3RB8FR8769;
 				INFOPLIST_FILE = ConfreaksMTVTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = anton.kostenich.ConfreaksMTVTests;

@@ -9,8 +9,22 @@
 /* Begin PBXBuildFile section */
 		15B8826AF6720C353F27FBBD /* libPods-ConfreaksAPITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE993D99D8AC2C44519304C /* libPods-ConfreaksAPITests.a */; };
 		C45AE32A20AF34F2004EA449 /* ConfreaksAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = C45AE32820AF34F2004EA449 /* ConfreaksAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4B60D5420AF377200A04E53 /* ConfreaksAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B60D5320AF377200A04E53 /* ConfreaksAPITests.m */; };
 		C4B60D5620AF377200A04E53 /* ConfreaksAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45AE32520AF34F2004EA449 /* ConfreaksAPI.framework */; };
+		C4D0F8B920AF3FE1007BFD74 /* FTEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = C4D0F8B720AF3FE1007BFD74 /* FTEvent.h */; };
+		C4D0F8BA20AF3FE1007BFD74 /* FTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D0F8B820AF3FE1007BFD74 /* FTEvent.m */; };
+		C4D0F8BD20AF3FF6007BFD74 /* FTConference.h in Headers */ = {isa = PBXBuildFile; fileRef = C4D0F8BB20AF3FF6007BFD74 /* FTConference.h */; };
+		C4D0F8BE20AF3FF6007BFD74 /* FTConference.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D0F8BC20AF3FF6007BFD74 /* FTConference.m */; };
+		C4D0F8C120AF403E007BFD74 /* FTPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = C4D0F8BF20AF403E007BFD74 /* FTPresenter.h */; };
+		C4D0F8C220AF403E007BFD74 /* FTPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D0F8C020AF403E007BFD74 /* FTPresenter.m */; };
+		C4D0F8C520AF406E007BFD74 /* FTVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = C4D0F8C320AF406E007BFD74 /* FTVideo.h */; };
+		C4D0F8C620AF406E007BFD74 /* FTVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D0F8C420AF406E007BFD74 /* FTVideo.m */; };
+		C4D0F8CA20AF409B007BFD74 /* FTSlugFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = C4D0F8C820AF409B007BFD74 /* FTSlugFormatter.h */; };
+		C4D0F8CB20AF409B007BFD74 /* FTSlugFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D0F8C920AF409B007BFD74 /* FTSlugFormatter.m */; };
+		C4D0F8D020AF413E007BFD74 /* FTConferenceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D0F8CF20AF413E007BFD74 /* FTConferenceSpec.m */; };
+		C4D0F8D220AF417A007BFD74 /* FTEventSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D0F8D120AF417A007BFD74 /* FTEventSpec.m */; };
+		C4D0F8D420AF4194007BFD74 /* FTPresenterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D0F8D320AF4194007BFD74 /* FTPresenterSpec.m */; };
+		C4D0F8D620AF41A9007BFD74 /* FTVideoSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D0F8D520AF41A9007BFD74 /* FTVideoSpec.m */; };
+		C4D0F8D820AF41BF007BFD74 /* FTSlugFormatterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D0F8D720AF41BF007BFD74 /* FTSlugFormatterSpec.m */; };
 		D63CB2D90DC55FB4EF68551E /* libPods-ConfreaksAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA21F68805CD41F33C735825 /* libPods-ConfreaksAPI.a */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +48,23 @@
 		C45AE32820AF34F2004EA449 /* ConfreaksAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfreaksAPI.h; sourceTree = "<group>"; };
 		C45AE32920AF34F2004EA449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4B60D5120AF377200A04E53 /* ConfreaksAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConfreaksAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4B60D5320AF377200A04E53 /* ConfreaksAPITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfreaksAPITests.m; sourceTree = "<group>"; };
 		C4B60D5520AF377200A04E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4D0F8B720AF3FE1007BFD74 /* FTEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTEvent.h; sourceTree = "<group>"; };
+		C4D0F8B820AF3FE1007BFD74 /* FTEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTEvent.m; sourceTree = "<group>"; };
+		C4D0F8BB20AF3FF6007BFD74 /* FTConference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTConference.h; sourceTree = "<group>"; };
+		C4D0F8BC20AF3FF6007BFD74 /* FTConference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTConference.m; sourceTree = "<group>"; };
+		C4D0F8BF20AF403E007BFD74 /* FTPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPresenter.h; sourceTree = "<group>"; };
+		C4D0F8C020AF403E007BFD74 /* FTPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPresenter.m; sourceTree = "<group>"; };
+		C4D0F8C320AF406E007BFD74 /* FTVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTVideo.h; sourceTree = "<group>"; };
+		C4D0F8C420AF406E007BFD74 /* FTVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTVideo.m; sourceTree = "<group>"; };
+		C4D0F8C820AF409B007BFD74 /* FTSlugFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTSlugFormatter.h; sourceTree = "<group>"; };
+		C4D0F8C920AF409B007BFD74 /* FTSlugFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTSlugFormatter.m; sourceTree = "<group>"; };
+		C4D0F8CC20AF40FB007BFD74 /* SpecHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
+		C4D0F8CF20AF413E007BFD74 /* FTConferenceSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTConferenceSpec.m; sourceTree = "<group>"; };
+		C4D0F8D120AF417A007BFD74 /* FTEventSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTEventSpec.m; sourceTree = "<group>"; };
+		C4D0F8D320AF4194007BFD74 /* FTPresenterSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPresenterSpec.m; sourceTree = "<group>"; };
+		C4D0F8D520AF41A9007BFD74 /* FTVideoSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTVideoSpec.m; sourceTree = "<group>"; };
+		C4D0F8D720AF41BF007BFD74 /* FTSlugFormatterSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTSlugFormatterSpec.m; sourceTree = "<group>"; };
 		D9BE323742FF66EFB4686BA7 /* Pods-ConfreaksAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfreaksAPITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ConfreaksAPITests/Pods-ConfreaksAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +123,8 @@
 		C45AE32720AF34F2004EA449 /* ConfreaksAPI */ = {
 			isa = PBXGroup;
 			children = (
+				C4D0F8C720AF408D007BFD74 /* Utils */,
+				C4D0F8B620AF3FA8007BFD74 /* Models */,
 				C45AE32820AF34F2004EA449 /* ConfreaksAPI.h */,
 				C45AE32920AF34F2004EA449 /* Info.plist */,
 			);
@@ -103,10 +134,55 @@
 		C4B60D5220AF377200A04E53 /* ConfreaksAPITests */ = {
 			isa = PBXGroup;
 			children = (
-				C4B60D5320AF377200A04E53 /* ConfreaksAPITests.m */,
+				C4D0F8CD20AF4124007BFD74 /* Models */,
+				C4D0F8CE20AF4124007BFD74 /* Utils */,
 				C4B60D5520AF377200A04E53 /* Info.plist */,
+				C4D0F8CC20AF40FB007BFD74 /* SpecHelper.h */,
 			);
 			path = ConfreaksAPITests;
+			sourceTree = "<group>";
+		};
+		C4D0F8B620AF3FA8007BFD74 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4D0F8B720AF3FE1007BFD74 /* FTEvent.h */,
+				C4D0F8B820AF3FE1007BFD74 /* FTEvent.m */,
+				C4D0F8BB20AF3FF6007BFD74 /* FTConference.h */,
+				C4D0F8BC20AF3FF6007BFD74 /* FTConference.m */,
+				C4D0F8BF20AF403E007BFD74 /* FTPresenter.h */,
+				C4D0F8C020AF403E007BFD74 /* FTPresenter.m */,
+				C4D0F8C320AF406E007BFD74 /* FTVideo.h */,
+				C4D0F8C420AF406E007BFD74 /* FTVideo.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C4D0F8C720AF408D007BFD74 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C4D0F8C820AF409B007BFD74 /* FTSlugFormatter.h */,
+				C4D0F8C920AF409B007BFD74 /* FTSlugFormatter.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C4D0F8CD20AF4124007BFD74 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4D0F8CF20AF413E007BFD74 /* FTConferenceSpec.m */,
+				C4D0F8D120AF417A007BFD74 /* FTEventSpec.m */,
+				C4D0F8D320AF4194007BFD74 /* FTPresenterSpec.m */,
+				C4D0F8D520AF41A9007BFD74 /* FTVideoSpec.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C4D0F8CE20AF4124007BFD74 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C4D0F8D720AF41BF007BFD74 /* FTSlugFormatterSpec.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		EEB24E6425B2586EE4B0E535 /* Frameworks */ = {
@@ -125,7 +201,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D0F8CA20AF409B007BFD74 /* FTSlugFormatter.h in Headers */,
+				C4D0F8C520AF406E007BFD74 /* FTVideo.h in Headers */,
+				C4D0F8BD20AF3FF6007BFD74 /* FTConference.h in Headers */,
+				C4D0F8C120AF403E007BFD74 /* FTPresenter.h in Headers */,
 				C45AE32A20AF34F2004EA449 /* ConfreaksAPI.h in Headers */,
+				C4D0F8B920AF3FE1007BFD74 /* FTEvent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +279,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = C45AE31B20AF34F2004EA449;
 			productRefGroup = C45AE32620AF34F2004EA449 /* Products */;
@@ -316,6 +398,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D0F8C220AF403E007BFD74 /* FTPresenter.m in Sources */,
+				C4D0F8CB20AF409B007BFD74 /* FTSlugFormatter.m in Sources */,
+				C4D0F8C620AF406E007BFD74 /* FTVideo.m in Sources */,
+				C4D0F8BA20AF3FE1007BFD74 /* FTEvent.m in Sources */,
+				C4D0F8BE20AF3FF6007BFD74 /* FTConference.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +410,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4B60D5420AF377200A04E53 /* ConfreaksAPITests.m in Sources */,
+				C4D0F8D820AF41BF007BFD74 /* FTSlugFormatterSpec.m in Sources */,
+				C4D0F8D220AF417A007BFD74 /* FTEventSpec.m in Sources */,
+				C4D0F8D420AF4194007BFD74 /* FTPresenterSpec.m in Sources */,
+				C4D0F8D020AF413E007BFD74 /* FTConferenceSpec.m in Sources */,
+				C4D0F8D620AF41A9007BFD74 /* FTVideoSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
